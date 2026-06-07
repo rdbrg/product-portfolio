@@ -21,7 +21,7 @@ export function OtherProductCases({ currentSlug }: OtherProductCasesProps) {
       <div className="mb-12 flex items-end justify-between gap-6">
         <h2 className="text-[clamp(1.6rem,2.45vw,2.4rem)] font-normal leading-none tracking-[-0.038em]">{language === "ru" ? "Другие продуктовые кейсы" : "Other product cases"}</h2>
       </div>
-      <div className="grid gap-7 md:grid-cols-2 xl:grid-cols-3">
+      <div className="grid gap-7 lg:grid-cols-3">
         {otherProjects.map((project) => (
           <MockProjectPreview key={project.slug} project={project} />
         ))}

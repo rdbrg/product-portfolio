@@ -6,6 +6,7 @@ export type Project = {
   industry: string;
   company: string;
   year: string;
+  categoryTag: string | Partial<Record<"ru" | "en", string>>;
   website?: string;
   accent: string;
   problem: string;
@@ -17,8 +18,8 @@ export type Project = {
   screens: number;
   previewImage?: string;
   i18n?: {
-    ru?: Partial<Pick<Project, "title" | "shortTitle" | "industry" | "company" | "problem" | "role" | "process" | "cornerCases" | "result" | "tags">>;
-    en?: Partial<Pick<Project, "title" | "shortTitle" | "industry" | "company" | "problem" | "role" | "process" | "cornerCases" | "result" | "tags" | "screensIntro" | "caseStudy">>;
+    ru?: Partial<Pick<Project, "title" | "shortTitle" | "industry" | "company" | "year" | "problem" | "role" | "process" | "cornerCases" | "result" | "tags">>;
+    en?: Partial<Pick<Project, "title" | "shortTitle" | "industry" | "company" | "year" | "problem" | "role" | "process" | "cornerCases" | "result" | "tags" | "screensIntro" | "caseStudy">>;
   };
   screensIntro?: string;
   artifacts?: {
@@ -55,6 +56,7 @@ export const projects: Project[] = [
     category: "product",
     industry: "Enterprise / e-commerce / automotive",
     company: "ROSSKO",
+    categoryTag: { ru: "Энтерпрайз", en: "Enterprise" },
     year: "2024-2026",
     website: "https://rossko.ru/",
     accent: "#d65cff",
@@ -74,6 +76,7 @@ export const projects: Project[] = [
         shortTitle: "ROSSKO",
         industry: "Enterprise / e-commerce / automotive",
         company: "ROSSKO",
+
         problem:
           "Internal teams needed interfaces for complex operational, logistics, and regulated workflows with many system states.",
         role: "Senior Product Designer: System Design, UX architecture, user scenarios, UX specifications, and documentation.",
@@ -254,6 +257,7 @@ export const projects: Project[] = [
     category: "product",
     industry: "B2B / telecom marketplace",
     company: "Базис Телеком",
+    categoryTag: "B2B",
     year: "2020-2024",
     website: "https://bazistelecom.ru/",
     accent: "#5f7cff",
@@ -273,6 +277,7 @@ export const projects: Project[] = [
         shortTitle: "Bazis Telecom",
         industry: "B2B / telecom marketplace",
         company: "Bazis Telecom",
+
         problem:
           "Corporate clients needed a B2B platform for finding telecom equipment, purchasing it, and managing orders with a clear MVP logic.",
         role: "Senior Product Designer: UX/UI, CustDev, MVP from scratch, information architecture, UX documentation.",
@@ -356,7 +361,8 @@ export const projects: Project[] = [
     category: "product",
     industry: "E-commerce / retail",
     company: "Ароматный мир",
-    year: "До 2020",
+    categoryTag: "E-commerce",
+    year: "2019-2020",
     website: "https://amwine.ru/",
     accent: "#ff6a3d",
     problem:
@@ -374,6 +380,8 @@ export const projects: Project[] = [
         shortTitle: "Aromatny Mir",
         industry: "E-commerce / retail",
         company: "Aromatny Mir",
+
+        year: "2019-2020",
         problem:
           "A mobile-first e-commerce flow needed clearer product discovery and product-page decisions to improve conversion without redesigning the whole store.",
         role: "Senior Product Designer: UX hypotheses, CJM, user flow, A/B tests, and release support.",
@@ -522,9 +530,10 @@ export const projects: Project[] = [
     title: "Сервис для поиска музыкантов «Слабаем!»",
     shortTitle: "Слабаем!",
     category: "product",
-    industry: "Product / music platform",
-    company: "Pet product",
-    year: "2020-2026",
+    industry: "Продукт / музыкальная платформа",
+    company: "Пет-проект",
+    categoryTag: { ru: "Продукт", en: "Product" },
+    year: "2023-настоящее время",
     website: "https://slabaem.space/",
     accent: "#18c37d",
     problem:
@@ -541,6 +550,8 @@ export const projects: Project[] = [
         shortTitle: "Slabaem!",
         industry: "Product / music platform",
         company: "Pet product",
+
+        year: "2023-present",
         problem:
           "Musicians and bands needed a service for finding each other, validating demand, and developing organic acquisition.",
         role: "Product owner / designer / fullstack developer: research, UX, launch, development, and product growth.",

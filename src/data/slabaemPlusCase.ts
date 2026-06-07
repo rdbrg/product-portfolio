@@ -175,7 +175,7 @@ export const slabaemPlusCase: SlabaemPlusBlock[] = [
       "Для Plus ограничение снимается: пользователь может возвращаться к опубликованным объявлениям и поддерживать их актуальность без пересоздания поста.",
     ],
   },
-  { type: "screens", items: ["Скрин 16.1: upsell при редактировании объясняет, что Plus и Pro снимают ограничение 3 днями."] },
+  { type: "screens", items: ["Скрин 16.1: upsell при редактировании объясняет, что Plus снимает ограничение 3 днями."] },
   {
     type: "section",
     title: "Сценарий 2: больше фото",
@@ -428,7 +428,7 @@ export const slabaemPlusCaseEn: SlabaemPlusBlock[] = [
       "For Plus and Pro, the restriction is removed: users can return to published posts and keep them up to date without recreating the post.",
     ],
   },
-  { type: "screens", items: ["Screen 16.1: edit upsell explains that Plus and Pro remove the 3-day restriction."] },
+  { type: "screens", items: ["Screen 16.1: edit upsell explains that Plus removes the 3-day restriction."] },
   {
     type: "section",
     title: "Scenario 2: More Photos",

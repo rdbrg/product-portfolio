@@ -39,6 +39,8 @@ const realScreens: Record<string, string> = {
     "/screens/Скрин 16 Plus снимает лимит и позволяет вести несколько поисков параллельно.png",
   "Скрин 16.1: upsell при редактировании объясняет, что Plus и Pro снимают ограничение 3 днями.":
     "/screens/Upsalle модальное окно при редактировании.png",
+  "Скрин 16.1: upsell при редактировании объясняет, что Plus снимает ограничение 3 днями.":
+    "/screens/Upsalle модальное окно при редактировании.png",
   "Скрин 17: счетчик фото во Free-версии заранее показывает доступный лимит.":
     "/screens/Скрин 17 счетчик фото во Free-версии заранее показывает доступный лимит.png",
   "Скрин 18: увеличенный лимит Plus помогает подробнее показать проект или инструмент.":
@@ -71,7 +73,7 @@ type PreviewScreen = {
 };
 
 function getDisplayLabel(label: string) {
-  return label.replace(/^(Скрин|Screen) \d+:\s*/, "");
+  return label.replace(/^(Скрин|Screen) \d+(?:\.\d+)?:\s*/, "");
 }
 
 function RealScreen({ label, src, index, language, onPreview }: { label: string; src: string; index: number; language: Language; onPreview: (screen: PreviewScreen) => void }) {

@@ -89,7 +89,7 @@ function ProjectHeader({ project, localizedProject }: { project: Project; locali
         <span>·</span>
         <span>{localizedProject.industry}</span>
         <span>·</span>
-        <span>{project.year}</span>
+        <span>{localizedProject.year}</span>
       </div>
 
       <div className="mt-5 flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
