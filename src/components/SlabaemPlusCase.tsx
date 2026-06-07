@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import type { SlabaemPlusBlock } from "@/data/slabaemPlusCase";
 import { slabaemPlusCase, slabaemPlusCaseEn } from "@/data/slabaemPlusCase";
 import { useLanguage } from "@/lib/language";
@@ -85,7 +86,7 @@ function RealScreen({ label, src, index, language, onPreview }: { label: string;
         className="group relative block w-full overflow-hidden rounded-[1.25rem] border border-white/10 bg-black/25 text-left shadow-[0_24px_70px_rgba(0,0,0,0.4)] outline-none transition duration-300 hover:-translate-y-1 hover:border-white/25 focus-visible:ring-2 focus-visible:ring-purple"
         aria-label={language === "ru" ? `Открыть превью: ${displayLabel}` : `Open preview: ${displayLabel}`}
       >
-        <img src={src} alt={displayLabel} className="h-auto w-full object-cover" />
+        <Image src={src} alt={displayLabel} width={1400} height={900} className="h-auto w-full object-cover" />
         <span className="absolute inset-0 flex items-center justify-center bg-black/0 opacity-0 transition duration-300 group-hover:bg-black/30 group-hover:opacity-100 group-focus-visible:bg-black/30 group-focus-visible:opacity-100">
           <span className="rounded-full bg-white/90 px-4 py-2 text-sm font-semibold text-black">{language === "ru" ? "Открыть" : "Open"}</span>
         </span>
@@ -196,9 +197,11 @@ function ScreenPreview({ screen, language, onClose }: { screen: PreviewScreen | 
           >
             {language === "ru" ? "Закрыть" : "Close"}
           </button>
-          <img
+          <Image
             src={screen.src}
             alt={displayLabel}
+            width={1800}
+            height={1200}
             className="h-auto max-h-[calc(100vh-8rem)] w-auto max-w-[calc(100vw-2rem)] rounded-[1.5rem] border border-white/15 object-contain shadow-[0_30px_120px_rgba(0,0,0,0.65)] sm:max-h-[calc(100vh-10rem)] sm:max-w-[calc(100vw-4rem)]"
           />
         </div>

@@ -46,6 +46,7 @@ export function Navbar() {
 
   const mainHref = isHomePage ? (isCasesActive ? "#" : "#product-cases") : "/";
   const mainLabel = isHomePage ? (isCasesActive ? (language === "ru" ? "Главная" : "Home") : language === "ru" ? "Кейсы" : "Cases") : language === "ru" ? "Главная" : "Home";
+  const cvHref = language === "ru" ? "/%D0%92%D0%B0%D0%B4%D0%B8%D0%BC_%D0%A0%D0%BE%D0%B4%D0%B1%D0%B5%D1%80%D0%B3_CV_RU.pdf" : "/%D0%92%D0%B0%D0%B4%D0%B8%D0%BC_%D0%A0%D0%BE%D0%B4%D0%B1%D0%B5%D1%80%D0%B3_CV_EN.pdf";
 
   return (
     <header className="fixed left-5 right-5 top-6 z-50 rounded-2xl bg-[linear-gradient(135deg,rgba(255,255,255,0.42),rgba(255,47,167,0.34)_34%,rgba(255,255,255,0.08)_58%,rgba(255,255,255,0.24))] p-px shadow-[0_18px_60px_rgba(0,0,0,0.28),inset_0_1px_0_rgba(255,255,255,0.22)] sm:left-8 sm:right-8 lg:left-12 lg:right-12">
@@ -79,7 +80,7 @@ export function Navbar() {
 
         <div className="relative flex items-center gap-3">
           <a
-            href="/%D0%92%D0%B0%D0%B4%D0%B8%D0%BC_%D0%A0%D0%BE%D0%B4%D0%B1%D0%B5%D1%80%D0%B3_CV.pdf"
+            href={cvHref}
             download
             className="hidden rounded-lg border border-white/15 px-4 py-3 text-base font-semibold transition hover:border-purple hover:text-purple sm:inline-flex"
           >

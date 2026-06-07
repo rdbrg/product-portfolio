@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   title: "Вадим Родберг | Senior Product Designer",
   description:
     "Senior Product Designer с 7-летним опытом в e-commerce, B2B и enterprise-продуктах. System Design, UX Architecture, research, flow и продуктовые метрики.",
+  icons: {
+    icon: [{ url: "/favicon.png", type: "image/png" }],
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

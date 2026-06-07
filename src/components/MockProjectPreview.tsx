@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Project } from "@/data/projects";
 import { useLanguage } from "@/lib/language";
 
@@ -35,13 +36,13 @@ export function MockProjectPreview({ project, size = "card" }: MockProjectPrevie
 
       {previewImage ? (
         <div className="absolute inset-0 flex items-center justify-center px-7 pb-24 pt-14">
-          <img
+          <Image
             src={previewImage}
             alt={language === "ru" ? `Превью кейса ${localizedProject.shortTitle}` : `${localizedProject.shortTitle} case preview`}
-            className={`rounded-[1.25rem] border border-white/12 shadow-[0_22px_60px_rgba(0,0,0,0.46)] transition duration-500 group-hover:scale-[1.03] ${
-              project.slug === "rossko-enterprise-services"
-                ? "h-full w-full object-cover object-center"
-                : "h-full w-full object-cover object-top"
+            fill
+            sizes="(max-width: 1024px) 78vw, 560px"
+            className={`rounded-[1.25rem] border border-white/12 object-cover shadow-[0_22px_60px_rgba(0,0,0,0.46)] transition duration-500 group-hover:scale-[1.03] ${
+              project.slug === "rossko-enterprise-services" ? "object-center" : "object-top"
             }`}
           />
         </div>

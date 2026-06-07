@@ -1,6 +1,7 @@
 "use client";
 
 import type { Project } from "@/data/projects";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/lib/language";
 
@@ -62,7 +63,13 @@ export function MockScreensGrid({ project }: MockScreensGridProps) {
                     className="group relative mt-6 block w-full overflow-hidden rounded-xl border border-black/10 bg-white text-left outline-none transition hover:-translate-y-0.5 hover:shadow-[0_18px_50px_rgba(0,0,0,0.22)] focus-visible:ring-2 focus-visible:ring-purple"
                     aria-label={language === "ru" ? `Открыть превью: ${localizedArtifact.title}` : `Open preview: ${localizedArtifact.title}`}
                   >
-                    <img src={artifact.image} alt={localizedArtifact.title} className="h-auto w-full object-contain" />
+                    <Image
+                      src={artifact.image}
+                      alt={localizedArtifact.title}
+                      width={1200}
+                      height={800}
+                      className="h-auto w-full object-contain"
+                    />
                     <span className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black/0 opacity-0 transition duration-300 group-hover:bg-black/25 group-hover:opacity-100 group-focus-visible:bg-black/25 group-focus-visible:opacity-100">
                       <span className="rounded-full bg-white/90 px-4 py-2 text-sm font-semibold text-black">{language === "ru" ? "Открыть" : "Open"}</span>
                     </span>
@@ -139,11 +146,13 @@ function ImagePreview({ preview, onClose }: { preview: { title: string; src: str
           >
             Закрыть
           </button>
-          <img
+          <Image
             src={preview.src}
             alt={preview.title}
+            width={1800}
+            height={1200}
             className="h-auto max-h-[calc(100vh-8rem)] w-auto max-w-[calc(100vw-2rem)] rounded-[1.5rem] border border-white/15 object-contain shadow-[0_30px_120px_rgba(0,0,0,0.65)] sm:max-h-[calc(100vh-10rem)] sm:max-w-[calc(100vw-4rem)]"
-        />
+          />
         </div>
         <p className="mt-4 text-center text-sm font-semibold text-white/65">{preview.title}</p>
       </div>
