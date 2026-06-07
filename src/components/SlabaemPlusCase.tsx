@@ -234,14 +234,6 @@ export function SlabaemPlusCase() {
                 <h1 className="mt-5 max-w-5xl text-[1.8rem] font-normal leading-[1.06] tracking-[-0.04em] sm:text-[2.8rem]">
                   {block.title}
                 </h1>
-                <a
-                  href="https://slabaem.space/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-7 inline-flex items-center rounded-full border border-white/15 bg-white/8 px-5 py-3 text-base font-semibold text-white/75 transition hover:border-purple/60 hover:bg-purple/15 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple"
-                >
-                  slabaem.space
-                </a>
               </section>
             );
           }

@@ -6,6 +6,7 @@ export type Project = {
   industry: string;
   company: string;
   year: string;
+  website?: string;
   accent: string;
   problem: string;
   role: string;
@@ -47,6 +48,7 @@ export const projects: Project[] = [
     industry: "Enterprise / e-commerce / automotive",
     company: "ROSSKO",
     year: "2024-2026",
+    website: "https://rossko.ru/",
     accent: "#d65cff",
     problem:
       "Внутренним командам требовались интерфейсы для сложных операционных, логистических и регламентированных процессов с большим количеством состояний системы.",
@@ -149,6 +151,7 @@ export const projects: Project[] = [
     industry: "B2B / telecom marketplace",
     company: "Базис Телеком",
     year: "2020-2024",
+    website: "https://btcom.ru/",
     accent: "#5f7cff",
     problem:
       "Корпоративным клиентам требовалась B2B-платформа для подбора телеком-оборудования, покупки и управления заказами с понятной логикой MVP.",
@@ -231,6 +234,7 @@ export const projects: Project[] = [
     industry: "E-commerce / retail",
     company: "Ароматный мир",
     year: "До 2020",
+    website: "https://amwine.ru/",
     accent: "#ff6a3d",
     problem:
       "В пользовательских сценариях поиска, каталога, карточки товара и оформления заказа требовалось находить проблемные зоны и улучшать конверсию.",
@@ -309,6 +313,7 @@ export const projects: Project[] = [
     industry: "Product / music platform",
     company: "Pet product",
     year: "2020-2026",
+    website: "https://slabaem.space/",
     accent: "#18c37d",
     problem:
       "Музыкантам и группам нужен был сервис для поиска друг друга, проверки гипотезы спроса и развития органического привлечения.",
