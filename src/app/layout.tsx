@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { CursorGlow } from "@/components/CursorGlow";
 import { Navbar } from "@/components/Navbar";
 import { ScrollToTopButton } from "@/components/ScrollToTopButton";
+import { LanguageProvider } from "@/lib/language";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin", "cyrillic"], variable: "--font-inter" });
@@ -17,12 +18,14 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="ru">
       <body className={inter.className}>
-        <div className="relative isolate min-h-screen bg-[#111111]">
-          <CursorGlow />
-          <Navbar />
-          <ScrollToTopButton />
-          <div className="relative z-10">{children}</div>
-        </div>
+        <LanguageProvider>
+          <div className="relative isolate min-h-screen bg-[#111111]">
+            <CursorGlow />
+            <Navbar />
+            <ScrollToTopButton />
+            <div className="relative z-10">{children}</div>
+          </div>
+        </LanguageProvider>
       </body>
     </html>
   );

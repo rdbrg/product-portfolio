@@ -2,7 +2,9 @@
 
 import { useEffect, useState } from "react";
 import type { SlabaemPlusBlock } from "@/data/slabaemPlusCase";
-import { slabaemPlusCase } from "@/data/slabaemPlusCase";
+import { slabaemPlusCase, slabaemPlusCaseEn } from "@/data/slabaemPlusCase";
+import { useLanguage } from "@/lib/language";
+import type { Language } from "@/lib/language";
 
 const realScreens: Record<string, string> = {
   "Скрин 1: стартовый экран продукта и основной вход в сценарий поиска музыкантов.":
@@ -34,6 +36,8 @@ const realScreens: Record<string, string> = {
     "/screens/Скрин 15 ограничение на публикации объясняет причину блокировки следующего объявления.png",
   "Скрин 16: Plus снимает лимит и позволяет вести несколько поисков параллельно.":
     "/screens/Скрин 16 Plus снимает лимит и позволяет вести несколько поисков параллельно.png",
+  "Скрин 16.1: upsell при редактировании объясняет, что Plus и Pro снимают ограничение 3 днями.":
+    "/screens/Upsalle модальное окно при редактировании.png",
   "Скрин 17: счетчик фото во Free-версии заранее показывает доступный лимит.":
     "/screens/Скрин 17 счетчик фото во Free-версии заранее показывает доступный лимит.png",
   "Скрин 18: увеличенный лимит Plus помогает подробнее показать проект или инструмент.":
@@ -66,10 +70,10 @@ type PreviewScreen = {
 };
 
 function getDisplayLabel(label: string) {
-  return label.replace(/^Скрин \d+:\s*/, "");
+  return label.replace(/^(Скрин|Screen) \d+:\s*/, "");
 }
 
-function RealScreen({ label, src, index, onPreview }: { label: string; src: string; index: number; onPreview: (screen: PreviewScreen) => void }) {
+function RealScreen({ label, src, index, language, onPreview }: { label: string; src: string; index: number; language: Language; onPreview: (screen: PreviewScreen) => void }) {
   const displayLabel = getDisplayLabel(label);
 
   return (
@@ -79,11 +83,11 @@ function RealScreen({ label, src, index, onPreview }: { label: string; src: stri
         type="button"
         onClick={() => onPreview({ label, src })}
         className="group relative block w-full overflow-hidden rounded-[1.25rem] border border-white/10 bg-black/25 text-left shadow-[0_24px_70px_rgba(0,0,0,0.4)] outline-none transition duration-300 hover:-translate-y-1 hover:border-white/25 focus-visible:ring-2 focus-visible:ring-purple"
-        aria-label={`Открыть превью: ${displayLabel}`}
+        aria-label={language === "ru" ? `Открыть превью: ${displayLabel}` : `Open preview: ${displayLabel}`}
       >
         <img src={src} alt={displayLabel} className="h-auto w-full object-cover" />
         <span className="absolute inset-0 flex items-center justify-center bg-black/0 opacity-0 transition duration-300 group-hover:bg-black/30 group-hover:opacity-100 group-focus-visible:bg-black/30 group-focus-visible:opacity-100">
-          <span className="rounded-full bg-white/90 px-4 py-2 text-sm font-semibold text-black">Открыть</span>
+          <span className="rounded-full bg-white/90 px-4 py-2 text-sm font-semibold text-black">{language === "ru" ? "Открыть" : "Open"}</span>
         </span>
       </button>
       <p className="relative mt-4 text-sm font-semibold text-white/55">{displayLabel}</p>
@@ -125,23 +129,29 @@ function MockScreen({ label, index }: { label: string; index: number }) {
   );
 }
 
-function ScreensBlock({ items, onPreview }: { items: string[]; onPreview: (screen: PreviewScreen) => void }) {
+function ScreensBlock({ items, sourceItems, language, onPreview }: { items: string[]; sourceItems: string[]; language: Language; onPreview: (screen: PreviewScreen) => void }) {
   const isCentered = items.length < 3;
 
   return (
     <section className="py-8">
       <div className={isCentered ? "mx-auto flex w-full max-w-[72rem] flex-wrap justify-center gap-5" : "mx-auto grid w-full max-w-[72rem] gap-5 md:grid-cols-2 xl:grid-cols-3"}>
-        {items.map((item, index) => (
+        {items.map((item, index) => {
+          const src = realScreens[item] ?? realScreens[sourceItems[index]];
+
+          return (
           <div key={item} className={isCentered ? "w-full max-w-[30rem] md:w-1/3" : undefined}>
-            {realScreens[item] ? <RealScreen label={item} src={realScreens[item]} index={index} onPreview={onPreview} /> : <MockScreen label={item} index={index} />}
+            {src ? <RealScreen label={item} src={src} index={index} language={language} onPreview={onPreview} /> : <MockScreen label={item} index={index} />}
           </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );
 }
 
-function ScreenPreview({ screen, onClose }: { screen: PreviewScreen | null; onClose: () => void }) {
+const ruScreenBlocks = slabaemPlusCase.filter((block): block is Extract<SlabaemPlusBlock, { type: "screens" }> => block.type === "screens");
+
+function ScreenPreview({ screen, language, onClose }: { screen: PreviewScreen | null; language: Language; onClose: () => void }) {
   useEffect(() => {
     if (!screen) {
       return;
@@ -182,9 +192,9 @@ function ScreenPreview({ screen, onClose }: { screen: PreviewScreen | null; onCl
             type="button"
             onClick={onClose}
             className="absolute right-3 top-3 z-10 rounded-full bg-black/70 px-4 py-2 text-sm font-semibold text-white/85 backdrop-blur transition hover:bg-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple"
-            aria-label="Закрыть превью"
+            aria-label={language === "ru" ? "Закрыть превью" : "Close preview"}
           >
-            Закрыть
+            {language === "ru" ? "Закрыть" : "Close"}
           </button>
           <img
             src={screen.src}
@@ -199,6 +209,8 @@ function ScreenPreview({ screen, onClose }: { screen: PreviewScreen | null; onCl
 }
 
 function TextBlock({ block }: { block: Extract<SlabaemPlusBlock, { type: "section" }> }) {
+  const sectionLabels = new Set(["Продуктовые:", "Монетизация:", "Качество и guardrails:", "Product metrics:", "Monetization:", "Quality and guardrails:"]);
+
   return (
     <section className="border-t border-white/10 py-12">
       <div className="grid gap-8 lg:grid-cols-[0.34fr_0.66fr]">
@@ -207,11 +219,17 @@ function TextBlock({ block }: { block: Extract<SlabaemPlusBlock, { type: "sectio
           {block.paragraphs?.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
           {block.items ? (
             <ul className="grid gap-3">
-              {block.items.map((item) => (
-                <li key={item} className="relative pl-6 before:absolute before:left-0 before:top-3 before:h-2 before:w-2 before:rounded-full before:bg-purple">
-                  {item}
-                </li>
-              ))}
+              {block.items.map((item) =>
+                sectionLabels.has(item) ? (
+                  <li key={item} className="pt-3 text-base font-semibold uppercase tracking-[0.16em] text-purple">
+                    {item.replace(/:$/, "")}
+                  </li>
+                ) : (
+                  <li key={item} className="relative pl-6 before:absolute before:left-0 before:top-3 before:h-2 before:w-2 before:rounded-full before:bg-purple">
+                    {item}
+                  </li>
+                ),
+              )}
             </ul>
           ) : null}
         </div>
@@ -221,12 +239,15 @@ function TextBlock({ block }: { block: Extract<SlabaemPlusBlock, { type: "sectio
 }
 
 export function SlabaemPlusCase() {
+  const { language } = useLanguage();
   const [previewScreen, setPreviewScreen] = useState<PreviewScreen | null>(null);
+  const blocks = language === "ru" ? slabaemPlusCase : slabaemPlusCaseEn;
+  let screenBlockIndex = 0;
 
   return (
     <>
       <div className="mx-auto max-w-[1800px] px-6 pb-24 pt-40 text-[#f5f2ee] sm:px-10 lg:px-14">
-        {slabaemPlusCase.map((block, index) => {
+        {blocks.map((block, index) => {
           if (block.type === "intro") {
             return (
               <section key={`${block.type}-${index}`} className="pb-16">
@@ -239,13 +260,15 @@ export function SlabaemPlusCase() {
           }
 
           if (block.type === "screens") {
-            return <ScreensBlock key={`${block.type}-${index}`} items={block.items} onPreview={setPreviewScreen} />;
+            const sourceItems = ruScreenBlocks[screenBlockIndex]?.items ?? block.items;
+            screenBlockIndex += 1;
+            return <ScreensBlock key={`${block.type}-${index}`} items={block.items} sourceItems={sourceItems} language={language} onPreview={setPreviewScreen} />;
           }
 
           return <TextBlock key={`${block.type}-${index}`} block={block} />;
         })}
       </div>
-      <ScreenPreview screen={previewScreen} onClose={() => setPreviewScreen(null)} />
+      <ScreenPreview screen={previewScreen} language={language} onClose={() => setPreviewScreen(null)} />
     </>
   );
 }

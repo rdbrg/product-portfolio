@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Project } from "@/data/projects";
+import { useLanguage } from "@/lib/language";
 
 type MockProjectPreviewProps = {
   project: Project;
@@ -7,6 +8,8 @@ type MockProjectPreviewProps = {
 };
 
 export function MockProjectPreview({ project, size = "card" }: MockProjectPreviewProps) {
+  const { language } = useLanguage();
+  const localizedProject = { ...project, ...(project.i18n?.[language] ?? {}) };
   const isHero = size === "hero";
   const isWide = size === "wide";
   const previewImage = project.previewImage ?? (project.slug === "slabaem-musicians-platform" ? "/screens/превью_слабаем.png" : null);
@@ -20,13 +23,13 @@ export function MockProjectPreview({ project, size = "card" }: MockProjectPrevie
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(255,255,255,0.08),transparent_32%),linear-gradient(135deg,rgba(255,255,255,0.08),transparent)]" />
       <div className="absolute left-5 top-5 z-10 flex gap-2 text-xs text-white/55">
-        <span>{project.company}</span>
+        <span>{localizedProject.company}</span>
         <span>/</span>
-        <span>{project.industry}</span>
+        <span>{localizedProject.industry}</span>
       </div>
       <div className="absolute inset-x-0 bottom-0 z-10 h-28 bg-gradient-to-t from-[#2f2f2f] via-[#2f2f2f]/92 to-transparent" />
       <div className={`absolute inset-x-0 bottom-0 z-20 flex items-end justify-between gap-4 p-5 ${isHero ? "sm:p-7" : ""}`}>
-        <h3 className="text-xl font-semibold tracking-tight text-white sm:text-2xl">{project.shortTitle}</h3>
+        <h3 className="text-xl font-semibold tracking-tight text-white sm:text-2xl">{localizedProject.shortTitle}</h3>
         <p className="shrink-0 text-right text-sm font-semibold text-white/50">{project.year}</p>
       </div>
 
@@ -34,7 +37,7 @@ export function MockProjectPreview({ project, size = "card" }: MockProjectPrevie
         <div className="absolute inset-0 flex items-center justify-center px-7 pb-24 pt-14">
           <img
             src={previewImage}
-            alt={`Превью кейса ${project.shortTitle}`}
+            alt={language === "ru" ? `Превью кейса ${localizedProject.shortTitle}` : `${localizedProject.shortTitle} case preview`}
             className={`rounded-[1.25rem] border border-white/12 shadow-[0_22px_60px_rgba(0,0,0,0.46)] transition duration-500 group-hover:scale-[1.03] ${
               project.slug === "rossko-enterprise-services"
                 ? "h-full w-full object-cover object-center"

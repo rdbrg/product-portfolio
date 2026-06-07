@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { MockProjectPreview } from "@/components/MockProjectPreview";
 import type { Project } from "@/data/projects";
+import { useLanguage } from "@/lib/language";
 
 type ProjectCarouselProps = {
   projects: Project[];
@@ -10,6 +11,7 @@ type ProjectCarouselProps = {
 
 export function ProjectCarousel({ projects }: ProjectCarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const { language } = useLanguage();
   const activeProject = projects[activeIndex];
 
   useEffect(() => {
@@ -19,7 +21,7 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
 
     const interval = window.setInterval(() => {
       setActiveIndex((current) => (current + 1) % projects.length);
-    }, 1500);
+    }, 1000);
 
     return () => window.clearInterval(interval);
   }, [projects.length]);
@@ -34,7 +36,7 @@ export function ProjectCarousel({ projects }: ProjectCarouselProps) {
           <button
             key={project.slug}
             type="button"
-            aria-label={`Показать проект ${project.shortTitle}`}
+            aria-label={language === "ru" ? `Показать проект ${project.shortTitle}` : `Show ${project.i18n?.en?.shortTitle ?? project.shortTitle} project`}
             onClick={() => setActiveIndex(index)}
             className={`h-2 rounded-full transition-all ${index === activeIndex ? "w-8 bg-purple" : "w-2 bg-white/25 hover:bg-white/45"}`}
           />

@@ -54,7 +54,7 @@ export function CursorGlow() {
       ref={glowRef}
       aria-hidden="true"
       style={{ "--tint": 0.5 } as React.CSSProperties}
-      className="pointer-events-none fixed left-0 top-0 z-0 hidden h-[44rem] w-[44rem] rounded-full blur-[105px] saturate-150 will-change-transform lg:block [background:radial-gradient(circle,rgba(219,39,119,calc(0.60-0.60*var(--tint)))_0%,rgba(255,47,167,calc(0.34-0.34*var(--tint)))_38%,rgba(145,70,255,calc(0.00+0.60*var(--tint)))_58%,transparent_72%)]"
+      className="pointer-events-none fixed left-0 top-0 z-0 hidden h-[44rem] w-[44rem] rounded-full blur-[105px] saturate-150 opacity-70 will-change-transform lg:block [background:radial-gradient(circle,rgba(219,39,119,calc(0.60-0.60*var(--tint)))_0%,rgba(255,47,167,calc(0.34-0.34*var(--tint)))_38%,rgba(145,70,255,calc(0.00+0.60*var(--tint)))_58%,transparent_72%)]"
     />
   );
 }

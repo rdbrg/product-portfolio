@@ -2,9 +2,11 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { useLanguage } from "@/lib/language";
 
 export function Navbar() {
   const [isCasesActive, setIsCasesActive] = useState(false);
+  const { language, setLanguage } = useLanguage();
   const pathname = usePathname();
   const isHomePage = pathname === "/";
 
@@ -43,7 +45,7 @@ export function Navbar() {
   }, [isHomePage]);
 
   const mainHref = isHomePage ? (isCasesActive ? "#" : "#product-cases") : "/";
-  const mainLabel = isHomePage ? (isCasesActive ? "Главная" : "Кейсы") : "Главная";
+  const mainLabel = isHomePage ? (isCasesActive ? (language === "ru" ? "Главная" : "Home") : language === "ru" ? "Кейсы" : "Cases") : language === "ru" ? "Главная" : "Home";
 
   return (
     <header className="fixed left-5 right-5 top-6 z-50 rounded-2xl bg-[linear-gradient(135deg,rgba(255,255,255,0.42),rgba(255,47,167,0.34)_34%,rgba(255,255,255,0.08)_58%,rgba(255,255,255,0.24))] p-px shadow-[0_18px_60px_rgba(0,0,0,0.28),inset_0_1px_0_rgba(255,255,255,0.22)] sm:left-8 sm:right-8 lg:left-12 lg:right-12">
@@ -83,9 +85,18 @@ export function Navbar() {
           >
             ↓ CV
           </a>
-          <div className="hidden overflow-hidden rounded-lg border border-white/15 text-base font-semibold sm:flex">
-            <span className="bg-[#f5f2ee] px-4 py-3 text-[#111111]">RU</span>
-            <span className="px-4 py-3 text-white/80">EN</span>
+          <div className="hidden overflow-hidden rounded-lg border border-white/15 text-base font-semibold sm:flex" aria-label={language === "ru" ? "Переключение языка" : "Language switcher"}>
+            {(["ru", "en"] as const).map((item) => (
+              <button
+                key={item}
+                type="button"
+                onClick={() => setLanguage(item)}
+                className={`px-4 py-3 transition ${language === item ? "bg-[#f5f2ee] text-[#111111]" : "text-white/80 hover:text-purple"}`}
+                aria-pressed={language === item}
+              >
+                {item.toUpperCase()}
+              </button>
+            ))}
           </div>
         </div>
       </div>
