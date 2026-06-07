@@ -56,7 +56,7 @@ const content = {
       {
         role: "Основатель / продуктовый дизайнер / fullstack",
         company: "Слабаем!",
-        period: "2020 — н.в.",
+        period: "2023 — н.в.",
         text: "Собственный продукт: исследование рынка, UX, запуск, монетизация, SEO, воронки, аналитика и развитие на основе данных.",
       },
       {
@@ -68,7 +68,7 @@ const content = {
       {
         role: "Продуктовый дизайнер (UX / UI)",
         company: "Ароматный мир",
-        period: "До 2020",
+        period: "Июнь 2019 — Август 2020",
         text: "E-commerce: поиск, каталог, карточка товара, checkout, CJM, user flow, A/B-тестирование, анализ поведения и сопровождение релизов.",
       },
     ],
@@ -122,7 +122,7 @@ const content = {
       {
         role: "Founder / Product Designer / Fullstack",
         company: "Slabaem!",
-        period: "2020 — present",
+        period: "2023 — present",
         text: "Own product: market research, UX, launch, monetization, SEO, funnels, analytics, and data-informed development.",
       },
       {
@@ -134,7 +134,7 @@ const content = {
       {
         role: "Product Designer (UX / UI)",
         company: "Aromatny Mir",
-        period: "Before 2020",
+        period: "June 2019 — August 2020",
         text: "E-commerce: search, catalogue, product page, checkout, CJM, user flow, A/B testing, behavior analysis, and release support.",
       },
     ],

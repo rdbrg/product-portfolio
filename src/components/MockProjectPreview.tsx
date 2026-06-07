@@ -9,8 +9,13 @@ type MockProjectPreviewProps = {
 };
 
 const CARD_PREVIEW_PADDING = {
-  hero: "p-5 pb-28 pt-16 sm:p-7 sm:pb-32 sm:pt-20",
-  card: "p-4 pb-24 pt-14 sm:p-5 sm:pb-24 sm:pt-14",
+  hero: "p-5 sm:p-7",
+  card: "p-4 sm:p-5",
+} as const;
+
+const CARD_PREVIEW_INSET = {
+  hero: "inset-x-0 top-0 bottom-12 sm:bottom-16",
+  card: "inset-x-0 top-0 bottom-12",
 } as const;
 
 export function MockProjectPreview({ project, size = "card" }: MockProjectPreviewProps) {
@@ -20,6 +25,7 @@ export function MockProjectPreview({ project, size = "card" }: MockProjectPrevie
   const isWide = size === "wide";
   const previewImage = project.previewImage ?? (project.slug === "slabaem-musicians-platform" ? "/screens/превью_слабаем.png" : null);
   const previewPaddingClassName = isHero ? CARD_PREVIEW_PADDING.hero : CARD_PREVIEW_PADDING.card;
+  const previewInsetClassName = isHero ? CARD_PREVIEW_INSET.hero : CARD_PREVIEW_INSET.card;
 
   return (
       <Link
@@ -29,13 +35,6 @@ export function MockProjectPreview({ project, size = "card" }: MockProjectPrevie
       }`}
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(255,255,255,0.08),transparent_32%),linear-gradient(135deg,rgba(255,255,255,0.08),transparent)]" />
-      <div className="absolute left-5 top-5 z-10 flex gap-2 text-xs text-white/55">
-        <span>{localizedProject.company}</span>
-        <span>/</span>
-        <span>{localize(project.categoryTag, language)}</span>
-        <span>/</span>
-        <span>{localizedProject.industry}</span>
-      </div>
       <div className="absolute inset-x-0 bottom-0 z-10 h-28 bg-gradient-to-t from-[#2f2f2f] via-[#2f2f2f]/92 to-transparent" />
       <div className={`absolute inset-x-0 bottom-0 z-20 flex items-end justify-between gap-4 p-5 ${isHero ? "sm:p-7" : ""}`}>
         <h3 className="text-xl font-semibold tracking-tight text-white sm:text-2xl">{localizedProject.shortTitle}</h3>
@@ -44,7 +43,7 @@ export function MockProjectPreview({ project, size = "card" }: MockProjectPrevie
 
 
       {previewImage ? (
-        <div className={`absolute inset-0 ${previewPaddingClassName}`}>
+        <div className={`absolute ${previewInsetClassName} ${previewPaddingClassName}`}>
           <div className="relative h-full w-full overflow-hidden rounded-[1.25rem] border border-white/12 shadow-[0_22px_60px_rgba(0,0,0,0.46)]">
             <Image
               src={previewImage}
