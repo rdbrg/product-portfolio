@@ -8,15 +8,41 @@ import { withBasePath } from "@/lib/paths";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin", "cyrillic"], variable: "--font-inter" });
+const siteUrl = "https://rdbrg.github.io/product-portfolio";
+const title = "Вадим Родберг | Senior Product Designer";
+const description =
+  "Senior Product Designer с 7-летним опытом в e-commerce, B2B и enterprise-продуктах. System Design, UX Architecture, research, flow и продуктовые метрики.";
+const previewImage = `${siteUrl}/foto.png`;
 
 export const metadata: Metadata = {
-  title: "Вадим Родберг | Senior Product Designer",
-  description:
-    "Senior Product Designer с 7-летним опытом в e-commerce, B2B и enterprise-продуктах. System Design, UX Architecture, research, flow и продуктовые метрики.",
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
   icons: {
     icon: [{ url: withBasePath("/favicon.png"), type: "image/png" }],
     shortcut: withBasePath("/favicon.png"),
     apple: withBasePath("/favicon.png"),
+  },
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    title,
+    description,
+    siteName: "Вадим Родберг | Portfolio",
+    images: [
+      {
+        url: previewImage,
+        width: 1200,
+        height: 1200,
+        alt: "Вадим Родберг",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: [previewImage],
   },
 };
 
