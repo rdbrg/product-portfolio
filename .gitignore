@@ -26,6 +26,9 @@ Desktop.ini
 .idea/
 *.swp
 
+# Local Kilo workspace files
+.kilo/
+
 # TypeScript
 *.tsbuildinfo
 
