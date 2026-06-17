@@ -6,6 +6,7 @@ import type { SlabaemPlusBlock } from "@/data/slabaemPlusCase";
 import { slabaemPlusCase, slabaemPlusCaseEn } from "@/data/slabaemPlusCase";
 import { useLanguage } from "@/lib/language";
 import type { Language } from "@/lib/language";
+import { withBasePath } from "@/lib/paths";
 
 const realScreens: Record<string, string> = {
   "Скрин 1: стартовый экран продукта и основной вход в сценарий поиска музыкантов.":
@@ -86,7 +87,7 @@ function RealScreen({ label, src, index, language, onPreview }: { label: string;
         className="group relative block w-full overflow-hidden rounded-[1.25rem] border border-white/10 bg-black/25 text-left shadow-[0_24px_70px_rgba(0,0,0,0.4)] outline-none transition duration-300 hover:-translate-y-1 hover:border-white/25 focus-visible:ring-2 focus-visible:ring-purple"
         aria-label={language === "ru" ? `Открыть превью: ${displayLabel}` : `Open preview: ${displayLabel}`}
       >
-        <Image src={src} alt={displayLabel} width={1400} height={900} className="h-auto w-full object-cover" />
+        <Image src={withBasePath(src)} alt={displayLabel} width={1400} height={900} className="h-auto w-full object-cover" />
         <span className="absolute inset-0 flex items-center justify-center bg-black/0 opacity-0 transition duration-300 group-hover:bg-black/30 group-hover:opacity-100 group-focus-visible:bg-black/30 group-focus-visible:opacity-100">
           <span className="rounded-full bg-white/90 px-4 py-2 text-sm font-semibold text-black">{language === "ru" ? "Открыть" : "Open"}</span>
         </span>
@@ -198,7 +199,7 @@ function ScreenPreview({ screen, language, onClose }: { screen: PreviewScreen | 
             {language === "ru" ? "Закрыть" : "Close"}
           </button>
           <Image
-            src={screen.src}
+            src={withBasePath(screen.src)}
             alt={displayLabel}
             width={1800}
             height={1200}

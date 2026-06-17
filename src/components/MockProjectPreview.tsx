@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Project } from "@/data/projects";
 import { localize, useLanguage } from "@/lib/language";
+import { withBasePath } from "@/lib/paths";
 
 type MockProjectPreviewProps = {
   project: Project;
@@ -46,7 +47,7 @@ export function MockProjectPreview({ project, size = "card" }: MockProjectPrevie
         <div className={`absolute ${previewInsetClassName} ${previewPaddingClassName}`}>
           <div className="relative h-full w-full overflow-hidden rounded-[1.25rem] border border-white/12 shadow-[0_22px_60px_rgba(0,0,0,0.46)]">
             <Image
-              src={previewImage}
+              src={withBasePath(previewImage)}
               alt={language === "ru" ? `Превью кейса ${localizedProject.shortTitle}` : `${localizedProject.shortTitle} case preview`}
               fill
               sizes="(max-width: 1024px) 78vw, 560px"

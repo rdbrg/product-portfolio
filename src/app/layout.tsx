@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Inter } from "next/font/google";
 import { CursorGlow } from "@/components/CursorGlow";
 import { Navbar } from "@/components/Navbar";
 import { ScrollToTopButton } from "@/components/ScrollToTopButton";
 import { LanguageProvider } from "@/lib/language";
+import { withBasePath } from "@/lib/paths";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin", "cyrillic"], variable: "--font-inter" });
@@ -14,9 +14,9 @@ export const metadata: Metadata = {
   description:
     "Senior Product Designer с 7-летним опытом в e-commerce, B2B и enterprise-продуктах. System Design, UX Architecture, research, flow и продуктовые метрики.",
   icons: {
-    icon: [{ url: "/favicon.png", type: "image/png" }],
-    shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    icon: [{ url: withBasePath("/favicon.png"), type: "image/png" }],
+    shortcut: withBasePath("/favicon.png"),
+    apple: withBasePath("/favicon.png"),
   },
 };
 
@@ -32,7 +32,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <div className="relative z-10">{children}</div>
           </div>
         </LanguageProvider>
-        <SpeedInsights />
       </body>
     </html>
   );

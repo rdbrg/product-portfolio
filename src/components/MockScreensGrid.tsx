@@ -4,6 +4,7 @@ import type { Project } from "@/data/projects";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/lib/language";
+import { withBasePath } from "@/lib/paths";
 
 type ArtifactType = NonNullable<Project["artifacts"]>[number]["type"];
 
@@ -64,7 +65,7 @@ export function MockScreensGrid({ project }: MockScreensGridProps) {
                     aria-label={language === "ru" ? `Открыть превью: ${localizedArtifact.title}` : `Open preview: ${localizedArtifact.title}`}
                   >
                     <Image
-                      src={artifact.image}
+                      src={withBasePath(artifact.image)}
                       alt={localizedArtifact.title}
                       width={1200}
                       height={800}
@@ -147,7 +148,7 @@ function ImagePreview({ preview, onClose }: { preview: { title: string; src: str
             Закрыть
           </button>
           <Image
-            src={preview.src}
+            src={withBasePath(preview.src)}
             alt={preview.title}
             width={1800}
             height={1200}
