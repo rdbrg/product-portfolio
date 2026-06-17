@@ -45,7 +45,7 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, [isHomePage]);
 
-  const mainHref = isHomePage ? (isCasesActive ? "#" : "#product-cases") : "/";
+  const mainHref = isHomePage ? (isCasesActive ? "#" : "#product-cases") : withBasePath("/");
   const mainLabel = isHomePage ? (isCasesActive ? (language === "ru" ? "Главная" : "Home") : language === "ru" ? "Кейсы" : "Cases") : language === "ru" ? "Главная" : "Home";
   const cvHref = withBasePath(
     language === "ru" ? "/%D0%92%D0%B0%D0%B4%D0%B8%D0%BC_%D0%A0%D0%BE%D0%B4%D0%B1%D0%B5%D1%80%D0%B3_CV_RU.pdf" : "/%D0%92%D0%B0%D0%B4%D0%B8%D0%BC_%D0%A0%D0%BE%D0%B4%D0%B1%D0%B5%D1%80%D0%B3_CV_EN.pdf",
