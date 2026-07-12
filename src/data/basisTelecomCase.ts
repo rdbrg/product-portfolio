@@ -30,22 +30,6 @@ const getScreensBlock = (index: number) => basisTelecomCase.filter((block): bloc
 export const basisTelecomCase: BasisTelecomBlock[] = [
   {
     type: "section",
-    title: "Роль",
-    paragraphs: [
-      "Работал старшим продуктовым дизайнером над международным B2B-маркетплейсом телекоммуникационного оборудования. Проект включал три связанных продукта: клиентский маркетплейс, внутренний бэкофис и кабинет продавца.",
-      "Я участвовал в создании продукта с нуля: от discovery и исследований до структуры MVP, интерфейсов, дизайн-системы и передачи решений в разработку.",
-    ],
-    items: [
-      "трансформировал сложные офлайн-процессы закупки, поставки и модерации в digital-flow;",
-      "проводил CustDev с покупателями, продавцами и сотрудниками Базис Телеком;",
-      "проектировал user story, CJM, user story mapping и end-to-end сценарии;",
-      "разделял функциональность на MVP и post-MVP;",
-      "создавал интерфейсы для покупателей, менеджеров, контент-команды, дирекции и продавцов;",
-      "формировал дизайн-систему и UX-логику для дальнейшего масштабирования продукта.",
-    ],
-  },
-  {
-    type: "section",
     title: "Контекст проекта",
     paragraphs: [
       "На рынке телекоммуникационного оборудования не было удобного централизованного хаба, где корпоративный покупатель мог бы подобрать оборудование, сравнить условия, оформить заказ и получить поддержку в вопросах логистики, документов и международных поставок.",
@@ -68,6 +52,22 @@ export const basisTelecomCase: BasisTelecomBlock[] = [
       "спроектировать кабинет продавца как CRM-подобную систему для поставщиков;",
       "снизить зависимость процессов от ручной коммуникации и разрозненных инструментов;",
       "подготовить основу для масштабирования MVP и развития post-MVP модулей.",
+    ],
+  },
+  {
+    type: "section",
+    title: "Роль",
+    paragraphs: [
+      "Работал старшим продуктовым дизайнером над международным B2B-маркетплейсом телекоммуникационного оборудования. Проект включал три связанных продукта: клиентский маркетплейс, внутренний бэкофис и кабинет продавца.",
+      "Моя роль закрывала путь от discovery и исследований до структуры MVP, интерфейсов, дизайн-системы и передачи решений в разработку.",
+    ],
+    items: [
+      "трансформировал сложные офлайн-процессы закупки, поставки и модерации в digital-flow;",
+      "проводил CustDev с покупателями, продавцами и сотрудниками Базис Телеком;",
+      "проектировал user story, CJM, user story mapping и end-to-end сценарии;",
+      "разделял функциональность на MVP и post-MVP;",
+      "создавал интерфейсы для покупателей, менеджеров, контент-команды, дирекции и продавцов;",
+      "формировал дизайн-систему и UX-логику для дальнейшего масштабирования продукта.",
     ],
   },
   {
@@ -139,6 +139,7 @@ export const basisTelecomCase: BasisTelecomBlock[] = [
     title: "Исследование",
     paragraphs: [
       "На discovery-этапе было важно быстро понять, где исходные бизнес-гипотезы расходятся с реальными процессами покупателей, продавцов и сотрудников.",
+      "Процесс строился от CustDev и разбора офлайн-операций к CJM, user story mapping и архитектуре MVP. Так мы отделяли обязательные сценарии первого релиза от post-MVP модулей.",
       "Интервью и разбор текущих процессов показали, что главная сложность не ограничивалась каталогом. Боли находились в логистике, коммуникации, документах, статусах заказов, настройке каталога и распределении ответственности между ролями.",
     ],
   },
@@ -152,7 +153,7 @@ export const basisTelecomCase: BasisTelecomBlock[] = [
   {
     type: "section",
     title: "Design strategy",
-    paragraphs: ["Стратегия проектирования строилась вокруг трех связанных продуктовых пространств."],
+    paragraphs: ["Стратегия проектирования стала мостом между задачей и решением: вместо одного интерфейса маркетплейса продукт был разложен на три связанных пространства."],
     items: [
       "1. Покупатель: сделать сложную закупку похожей на понятный e-commerce flow, но сохранить B2B-детали заказа, компании и поставки;",
       "2. Бэкофис: превратить офлайн-операции сотрудников в рабочую систему с заказами, компаниями, документами, товарами и коэффициентами;",
@@ -284,7 +285,7 @@ export const basisTelecomCase: BasisTelecomBlock[] = [
     title: "Результаты",
     paragraphs: [
       "В результате была спроектирована целостная B2B-платформа: клиентский маркетплейс, бэкофис и кабинет продавца связаны общей логикой товаров, заказов, компаний, документов, статусов и ролей.",
-      "Исследования помогли уточнить исходную бизнес-логику, выявить реальные боли логистики и коммуникации и сделать структуру продукта ближе к настоящим процессам пользователей.",
+      "Исследования и процессное разложение помогли уточнить исходную бизнес-логику, выявить реальные боли логистики и коммуникации и сделать структуру продукта ближе к настоящим процессам пользователей.",
     ],
     items: [
       "сформирована дизайн-система и отрисованы ключевые экраны трех продуктовых пространств;",
@@ -315,22 +316,6 @@ export const basisTelecomCase: BasisTelecomBlock[] = [
 export const basisTelecomCaseEn: BasisTelecomBlock[] = [
   {
     type: "section",
-    title: "Role",
-    paragraphs: [
-      "I worked as a senior product designer on an international B2B marketplace for telecom equipment. The project included three connected products: the customer marketplace, the internal back office, and the seller cabinet.",
-      "I participated in building the product from scratch: from discovery and research to MVP structure, interfaces, design system, and handoff to development.",
-    ],
-    items: [
-      "transformed complex offline procurement, delivery, and moderation processes into digital flows;",
-      "ran CustDev interviews with buyers, sellers, and Bazis Telecom employees;",
-      "designed user stories, CJM, user story mapping, and end-to-end scenarios;",
-      "split functionality into MVP and post-MVP scopes;",
-      "created interfaces for buyers, managers, the content team, executives, and sellers;",
-      "formed the design system and UX logic for future scaling.",
-    ],
-  },
-  {
-    type: "section",
     title: "Project Context",
     paragraphs: [
       "The telecom equipment market lacked a convenient centralized hub where a corporate buyer could find equipment, compare terms, place an order, and get support with logistics, documents, and international delivery.",
@@ -353,6 +338,22 @@ export const basisTelecomCaseEn: BasisTelecomBlock[] = [
       "design a seller cabinet as a CRM-like system for suppliers;",
       "reduce dependence on manual communication and fragmented tools;",
       "prepare a foundation for scaling the MVP and developing post-MVP modules.",
+    ],
+  },
+  {
+    type: "section",
+    title: "Role",
+    paragraphs: [
+      "I worked as a senior product designer on an international B2B marketplace for telecom equipment. The project included three connected products: the customer marketplace, the internal back office, and the seller cabinet.",
+      "My role covered the path from discovery and research to MVP structure, interfaces, design system, and handoff to development.",
+    ],
+    items: [
+      "transformed complex offline procurement, delivery, and moderation processes into digital flows;",
+      "ran CustDev interviews with buyers, sellers, and Bazis Telecom employees;",
+      "designed user stories, CJM, user story mapping, and end-to-end scenarios;",
+      "split functionality into MVP and post-MVP scopes;",
+      "created interfaces for buyers, managers, the content team, executives, and sellers;",
+      "formed the design system and UX logic for future scaling.",
     ],
   },
   {
@@ -417,6 +418,7 @@ export const basisTelecomCaseEn: BasisTelecomBlock[] = [
     title: "Research",
     paragraphs: [
       "At the discovery stage, it was important to quickly understand where the initial business hypotheses diverged from real buyer, seller, and employee processes.",
+      "The process moved from CustDev and offline-operation analysis to CJM, user story mapping, and MVP architecture. This helped separate required first-release scenarios from post-MVP modules.",
       "Interviews and process analysis showed that the main complexity was not limited to the catalogue. The pain points were logistics, communication, documents, order statuses, catalogue configuration, and role responsibility.",
     ],
   },
@@ -430,7 +432,7 @@ export const basisTelecomCaseEn: BasisTelecomBlock[] = [
   {
     type: "section",
     title: "Design Strategy",
-    paragraphs: ["The design strategy was built around three connected product spaces."],
+    paragraphs: ["The design strategy became the bridge between the task and the solution: instead of one marketplace interface, the product was decomposed into three connected spaces."],
     items: [
       "1. Buyer: make complex procurement feel like a clear e-commerce flow while preserving B2B details around orders, company data, and delivery;",
       "2. Back office: turn offline employee operations into a working system for orders, companies, documents, products, and coefficients;",
@@ -516,7 +518,7 @@ export const basisTelecomCaseEn: BasisTelecomBlock[] = [
     title: "Results",
     paragraphs: [
       "As a result, we designed a coherent B2B platform: the customer marketplace, back office, and seller cabinet were connected by shared logic for products, orders, companies, documents, statuses, and roles.",
-      "Research helped refine the initial business logic, reveal real pain points in logistics and communication, and make the product structure closer to actual user processes.",
+      "Research and process decomposition helped refine the initial business logic, reveal real pain points in logistics and communication, and make the product structure closer to actual user processes.",
     ],
     items: [
       "formed the design system and designed key screens across three product spaces;",

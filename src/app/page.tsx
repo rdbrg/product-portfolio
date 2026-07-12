@@ -54,9 +54,9 @@ const content = {
         text: "Экосистема внутренних сервисов для автоматизации операционных и логистических процессов: «Честный Знак», ГИС ЭПД, AI-сервис на базе LLM, UX-спецификации и унификация паттернов.",
       },
       {
-        role: "Основатель / продуктовый дизайнер / fullstack",
+        role: "Старший продуктовый дизайнер / fullstack",
         company: "Слабаем!",
-        period: "2023 — н.в.",
+        period: "2023 — 2025",
         text: "Собственный продукт: исследование рынка, UX, запуск, монетизация, SEO, воронки, аналитика и развитие на основе данных.",
       },
       {
@@ -120,9 +120,9 @@ const content = {
         text: "An ecosystem of internal services for automating operational and logistics processes: Chestny ZNAK, GIS EPD, an LLM-based AI service, UX specifications, and pattern unification.",
       },
       {
-        role: "Founder / Product Designer / Fullstack",
+        role: "Senior Product Designer / Fullstack",
         company: "Slabaem!",
-        period: "2023 — present",
+        period: "2023 — 2025",
         text: "Own product: market research, UX, launch, monetization, SEO, funnels, analytics, and data-informed development.",
       },
       {

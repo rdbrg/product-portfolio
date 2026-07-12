@@ -24,6 +24,7 @@ export const slabaemPlusCase: SlabaemPlusBlock[] = [
       "Продукт: «Слабаем!» — городской музыкальный сервис для поиска музыкантов, групп, объявлений и контактов в музыкальной среде.",
       "Пользователи: активные музыканты, авторы объявлений, участники групп и проектов.",
       "Задача продукта: помочь пользователю быстрее найти нужных людей, опубликовать запрос и выйти на контакт без лишнего шума.",
+      "Задача Plus: расширить возможности для активных пользователей и запустить подписочную монетизацию так, чтобы базовый Free-сценарий оставался полезным.",
       "Изначально базовый сценарий строился вокруг объявлений: пользователь публикует пост, добавляет описание, инструменты, жанры, город и ждет отклики. Но для активных пользователей базовых возможностей становилось недостаточно.",
     ],
   },
@@ -43,6 +44,7 @@ export const slabaemPlusCase: SlabaemPlusBlock[] = [
       "сформулировал ценность платной подписки без ухудшения Free-опыта;",
       "разделил базовые ограничения и платные улучшения;",
       "спроектировал UX платных преимуществ;",
+      "разобрал сценарии активных пользователей и моменты, где ограничения создают реальное трение;",
       "продумал места, где уместно предложить Plus;",
       "связал подписку с поведением активных пользователей;",
       "заложил метрики для оценки влияния Plus на активность и монетизацию.",
@@ -90,7 +92,7 @@ export const slabaemPlusCase: SlabaemPlusBlock[] = [
     title: "Продуктовый принцип",
     paragraphs: [
       "Главный принцип проекта — спокойный интерфейс: не создавать тревогу и давление, а помогать пользователю спокойно сделать полезный следующий шаг.",
-      "Поэтому Plus нельзя было строить как агрессивный платный барьер. Он должен был:",
+      "На этапе проектирования я проверял каждое преимущество через вопрос: оно снижает реальное трение активного пользователя или просто искусственно ухудшает Free? Поэтому Plus нельзя было строить как агрессивный платный барьер. Он должен был:",
     ],
     items: [
       "не ломать базовый сценарий Free;",
@@ -291,6 +293,7 @@ export const slabaemPlusCaseEn: SlabaemPlusBlock[] = [
       "Product: Slabaem! is a city music service for finding musicians, bands, posts, and contacts inside the music community.",
       "Users: active musicians, post authors, band members, and project participants.",
       "Product goal: help users find the right people faster, publish a request, and start communication without unnecessary noise.",
+      "Plus goal: expand capabilities for active users and launch subscription monetization while keeping the baseline Free scenario useful.",
       "Initially, the core scenario was built around posts: a user publishes a request, adds a description, instruments, genres, city, and waits for replies. For active users, the basic capabilities eventually became insufficient.",
     ],
   },
@@ -310,6 +313,7 @@ export const slabaemPlusCaseEn: SlabaemPlusBlock[] = [
       "defined the value of a paid subscription without degrading the Free experience;",
       "separated baseline limitations from paid improvements;",
       "designed the UX of paid benefits;",
+      "analyzed active-user scenarios and the moments where limitations created real friction;",
       "planned contextual upsell points in the product;",
       "connected the subscription to active-user behavior;",
       "defined metrics for evaluating the impact of Plus on activity and monetization.",
@@ -357,7 +361,7 @@ export const slabaemPlusCaseEn: SlabaemPlusBlock[] = [
     title: "Product Principle",
     paragraphs: [
       "The main principle of the project is Calm UX: do not create anxiety, FOMO, or pressure; instead, help users calmly take the next useful step.",
-      "That is why Plus could not be built as an aggressive paywall. It had to:",
+      "During design, I checked every benefit against one question: does it reduce real friction for active users, or does it only make Free artificially worse? That is why Plus could not be built as an aggressive paywall. It had to:",
     ],
     items: [
       "avoid breaking the baseline Free scenario;",

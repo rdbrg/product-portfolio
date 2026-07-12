@@ -111,14 +111,14 @@ export const projects: Project[] = [
             "mobile scenarios required a short path to action and understandable states",
           ],
           problemBusiness: [
-            "complex processes had to be automated without losing control or regulatory compliance",
-            "different internal services had to use unified UX patterns and system logic",
-            "the development team needed specifications that reduced the risk of ambiguous implementation",
+            "the task was to turn regulated operational workflows into predictable internal services without losing control or compliance",
+            "different internal services had to use unified UX patterns, state logic, and error handling",
+            "the development team needed specifications that reduced ambiguity before implementation",
           ],
           research: [
-            "analysis of business requirements and technical constraints together with analysts",
-            "analysis of current user flows and points where the process breaks",
-            "identification of roles, statuses, errors, exceptions, and dependencies on external systems",
+            "the process started with analysis of business requirements and technical constraints together with analysts",
+            "we mapped current user flows and points where the regulated process breaks",
+            "identified roles, statuses, errors, exceptions, and dependencies on external systems before designing screens",
             "comparison of web and mobile usage scenarios",
             "use of a process experience map (XPM) and event storming to describe domain logic before designing the interface layer",
           ],
@@ -128,9 +128,9 @@ export const projects: Project[] = [
           ],
           solution: [
             "designed user scenarios for product marking and system interaction with GIS MT (Chestny ZNAK) and GIS EPD (transport logistics and electronic document workflow)",
-            "documented document states, errors, restrictions, and alternative branches",
+            "documented document states, errors, restrictions, and alternative branches as part of the UX specification",
             "prepared interfaces for internal web services and adaptive scenarios for mobile devices",
-            "formed UX specifications for development and team alignment",
+            "formed UX specifications that connected business rules, user actions, system states, and implementation logic",
           ],
           validation: [
             "scenario validation with analysts and product teams",
@@ -138,9 +138,9 @@ export const projects: Project[] = [
             "clarification of edge-case scenarios after discussing technical constraints",
           ],
           results: [
-            "complex business processes were translated into clear user scenarios and specifications",
-            "ambiguity between business requirements, UX, and implementation was reduced",
-            "a unified logic of states, errors, and patterns was established across internal services",
+            "complex business processes were translated into clear user scenarios, state models, and specifications",
+            "teams received a shared source of truth for roles, document statuses, errors, and edge cases",
+            "a unified logic of states, errors, and patterns was established across internal services, reducing ambiguity between business requirements, UX, and implementation",
           ],
           insights: [
             "in enterprise products, the key value of design is often not in screens but in system logic",
@@ -148,7 +148,7 @@ export const projects: Project[] = [
             "a strong UX specification helps align business, analytics, and development",
           ],
           conclusion: [
-            "The case demonstrates systemic UX work: from a regulated process and constraints to interface logic, states, errors, and documentation for development.",
+            "The case demonstrates systemic UX work: a regulated process was decomposed into product logic, interface states, edge cases, and development-ready documentation.",
           ],
         },
       },
@@ -209,14 +209,14 @@ export const projects: Project[] = [
         "мобильные сценарии требуют короткого пути к действию и понятных состояний",
       ],
       problemBusiness: [
-        "сложные процессы нужно автоматизировать без потери контроля и соответствия регламентам",
-        "разные внутренние сервисы должны использовать единые UX-паттерны и системную логику",
-        "команде разработки нужны спецификации, которые снижают риск неоднозначной реализации",
+        "задача состояла в том, чтобы перевести регламентированные операционные процессы во внутренние сервисы без потери контроля и соответствия требованиям",
+        "разные внутренние сервисы должны использовать единые UX-паттерны, логику состояний и обработку ошибок",
+        "команде разработки нужны спецификации, которые снимают неоднозначность до реализации",
       ],
       research: [
-        "разбор бизнес-требований и технических ограничений совместно с аналитиками",
-        "анализ текущих пользовательских потоков и точек, где процесс ломается",
-        "выявление ролей, статусов, ошибок, исключений и зависимостей от внешних систем",
+        "процесс начинался с разбора бизнес-требований и технических ограничений совместно с аналитиками",
+        "мы картировали текущие пользовательские потоки и точки, где регламентированный процесс ломается",
+        "до проектирования экранов выявлялись роли, статусы, ошибки, исключения и зависимости от внешних систем",
         "сравнение сценариев веб- и мобильного использования",
         "использование карты процесс-опыта (XPM) и event storming для описания доменной логики до проектирования интерфейсного слоя",
       ],
@@ -226,9 +226,9 @@ export const projects: Project[] = [
       ],
       solution: [
         "спроектированы пользовательские сценарии для маркировки товаров и системного взаимодействия с ГИС МТ («Честный Знак») и ГИС ЭПД (транспортная логистика и электронный документооборот)",
-        "описаны состояния документов, ошибки, ограничения и альтернативные ветки",
+        "состояния документов, ошибки, ограничения и альтернативные ветки описаны как часть UX-спецификации",
         "подготовлены интерфейсы внутренних веб-сервисов и адаптивные сценарии для мобильных устройств",
-        "сформированы UX-спецификации для разработки и согласования с командами",
+        "сформированы UX-спецификации, которые связали бизнес-правила, действия пользователя, состояния системы и логику реализации",
       ],
       validation: [
         "проверка сценариев вместе с аналитиками и продуктовыми командами",
@@ -236,9 +236,9 @@ export const projects: Project[] = [
         "уточнение edge-case сценариев после обсуждения технических ограничений",
       ],
       results: [
-        "сложные бизнес-процессы переведены в понятные пользовательские сценарии и спецификации",
-        "снижена неоднозначность между бизнес-требованиями, UX и реализацией",
-        "заложена единая логика состояний, ошибок и паттернов во внутренних сервисах",
+        "сложные бизнес-процессы переведены в понятные пользовательские сценарии, модели состояний и спецификации",
+        "команды получили единый источник правды по ролям, статусам документов, ошибкам и edge-cases",
+        "заложена единая логика состояний, ошибок и паттернов во внутренних сервисах, что снизило неоднозначность между бизнес-требованиями, UX и реализацией",
       ],
       insights: [
         "в enterprise-продуктах ключевая ценность дизайна часто не в экранах, а в системной логике",
@@ -246,7 +246,7 @@ export const projects: Project[] = [
         "хорошая UX-спецификация помогает синхронизировать бизнес, аналитику и разработку",
       ],
       conclusion: [
-        "Кейс показывает работу с системным UX: от регламентированного процесса и ограничений до интерфейса, состояний, ошибок и документации для разработки.",
+        "Кейс показывает работу с системным UX: регламентированный процесс был разложен на продуктовую логику, состояния интерфейса, edge-cases и документацию для разработки.",
       ],
     },
   },
@@ -533,7 +533,7 @@ export const projects: Project[] = [
     industry: "Продукт / музыкальная платформа",
     company: "Пет-проект",
     categoryTag: { ru: "Продукт", en: "Product" },
-    year: "2023-настоящее время",
+    year: "2023-2025",
     website: "https://slabaem.space/",
     accent: "#18c37d",
     problem:
@@ -551,7 +551,7 @@ export const projects: Project[] = [
         industry: "Product / music platform",
         company: "Pet product",
 
-        year: "2023-present",
+        year: "2023-2025",
         problem:
           "Musicians and bands needed a service for finding each other, validating demand, and developing organic acquisition.",
         role: "Product owner / designer / fullstack developer: research, UX, launch, development, and product growth.",
@@ -628,7 +628,6 @@ export const projects: Project[] = [
 export const productProjects = projects
   .filter((project) => project.category === "product")
   .sort((a, b) => {
-    if (a.slug === "slabaem-musicians-platform") return -1;
-    if (b.slug === "slabaem-musicians-platform") return 1;
-    return 0;
+    const order = ["rossko-enterprise-services", "slabaem-musicians-platform", "basis-telecom-marketplace", "aromatny-mir-ecommerce"];
+    return order.indexOf(a.slug) - order.indexOf(b.slug);
   });
