@@ -1,10 +1,12 @@
 "use client";
 
+import Image from "next/image";
 import { MockProjectPreview } from "@/components/MockProjectPreview";
 import { ProjectCarousel } from "@/components/ProjectCarousel";
 import { RandomEmojiSet } from "@/components/RandomEmojiSet";
 import { productProjects } from "@/data/projects";
 import { useLanguage } from "@/lib/language";
+import { withBasePath } from "@/lib/paths";
 
 const content = {
   ru: {
@@ -212,18 +214,27 @@ export default function Home() {
           href="https://t.me/RodbergDesign"
           target="_blank"
           rel="noreferrer"
-          className="group block rounded-[1.75rem] border border-white/10 bg-[#1d1d1d] p-7 transition hover:border-purple/50 hover:bg-[#242024] sm:p-9"
+          className="group relative block overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#1d1d1d]/80 p-7 transition hover:border-purple/50 hover:bg-[#242024]/80 sm:p-9"
         >
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-purple">{t.channel.eyebrow}</p>
-          <div className="mt-5 flex flex-col justify-between gap-6 md:flex-row md:items-end">
-            <div className="max-w-3xl">
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-2/3 transition duration-500 group-hover:scale-[1.03]">
+            <Image
+              src={withBasePath("/rodberg-design-channel.png")}
+              alt=""
+              fill
+              sizes="67vw"
+              className="object-cover object-center opacity-70 [mask-image:linear-gradient(to_right,transparent_0%,transparent_22%,black_48%,black_100%)]"
+            />
+          </div>
+          <div className="relative z-10 max-w-[42%]">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-purple">{t.channel.eyebrow}</p>
+            <div className="mt-5">
               <h2 className="text-[clamp(1.6rem,2.45vw,2.35rem)] font-semibold leading-tight tracking-[-0.03em]">{t.channel.title}</h2>
               <p className="mt-4 text-lg leading-8 text-white/62">{t.channel.text}</p>
             </div>
-            <span className="shrink-0 text-lg font-semibold text-white transition group-hover:text-purple">
-              {t.channel.link} →
-            </span>
           </div>
+          <span className="absolute bottom-7 right-7 z-10 text-right text-lg font-semibold text-white transition group-hover:text-purple sm:bottom-9 sm:right-9">
+            {t.channel.link} →
+          </span>
         </a>
       </section>
 
