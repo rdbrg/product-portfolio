@@ -59,7 +59,7 @@ export const basisTelecomCase: BasisTelecomBlock[] = [
     title: "Роль",
     paragraphs: [
       "Работал старшим продуктовым дизайнером над международным B2B-маркетплейсом телекоммуникационного оборудования. Проект включал три связанных продукта: клиентский маркетплейс, внутренний бэкофис и кабинет продавца.",
-      "Моя роль закрывала путь от discovery и исследований до структуры MVP, интерфейсов, дизайн-системы и передачи решений в разработку.",
+      "Отвечал за продуктовый дизайн от discovery до структуры MVP, целевой архитектуры, дизайн-системы и передачи решений в разработку.",
     ],
     items: [
       "трансформировал сложные офлайн-процессы закупки, поставки и модерации в digital-flow;",
@@ -118,20 +118,6 @@ export const basisTelecomCase: BasisTelecomBlock[] = [
       "внутренний вход сотрудников в бэкофис для обработки заказов и контента;",
       "вход продавца в кабинет для управления ассортиментом и операционными задачами;",
       "обучающий портал как точка поддержки для продавцов.",
-    ],
-  },
-  {
-    type: "section",
-    title: "Моя зона ответственности",
-    paragraphs: ["Я работал на стыке продуктовой логики, пользовательских сценариев и интерфейсной детализации."],
-    items: [
-      "собирал требования от бизнеса и внутренних команд;",
-      "проводил CustDev с покупателями, продавцами и сотрудниками отделов;",
-      "разбирал офлайн-процессы продаж, закупок, логистики, документов и модерации;",
-      "оформлял пользовательские сценарии в user story, CJM и user story mapping;",
-      "проектировал информационную архитектуру трех пространств продукта;",
-      "создавал wireframes, UI-макеты и дизайн-систему;",
-      "готовил решения для MVP и отдельно фиксировал post-MVP функциональность.",
     ],
   },
   {
@@ -285,13 +271,12 @@ export const basisTelecomCase: BasisTelecomBlock[] = [
     title: "Результаты",
     paragraphs: [
       "В результате была спроектирована целостная B2B-платформа: клиентский маркетплейс, бэкофис и кабинет продавца связаны общей логикой товаров, заказов, компаний, документов, статусов и ролей.",
-      "Исследования и процессное разложение помогли уточнить исходную бизнес-логику, выявить реальные боли логистики и коммуникации и сделать структуру продукта ближе к настоящим процессам пользователей.",
+      "Исследования помогли скорректировать исходную бизнес-логику и приблизить структуру продукта к реальным процессам пользователей. Часть количественных показателей проекта не раскрывается.",
     ],
     items: [
       "сформирована дизайн-система и отрисованы ключевые экраны трех продуктовых пространств;",
       "улучшена верхнеуровневая структура приложения и личного кабинета покупателя;",
-      "бэкофис помог сократить время выполнения задач при работе с заказом;",
-      "интерфейс бэкофиса упростил онбординг новых менеджеров;",
+      "бэкофис упростил работу с заказами и онбординг новых менеджеров;",
       "получены 10+ лояльных китайских производителей, готовых сбывать продукцию через платформу;",
       "выявлены особенности использования интерфейсов жителями Китая;",
       "заложена структура MVP и post-MVP для дальнейшего развития маркетплейса.",
@@ -345,7 +330,7 @@ export const basisTelecomCaseEn: BasisTelecomBlock[] = [
     title: "Role",
     paragraphs: [
       "I worked as a senior product designer on an international B2B marketplace for telecom equipment. The project included three connected products: the customer marketplace, the internal back office, and the seller cabinet.",
-      "My role covered the path from discovery and research to MVP structure, interfaces, design system, and handoff to development.",
+      "I owned product design from discovery through MVP scope, target architecture, design system, and engineering handoff.",
     ],
     items: [
       "transformed complex offline procurement, delivery, and moderation processes into digital flows;",
@@ -397,20 +382,6 @@ export const basisTelecomCaseEn: BasisTelecomBlock[] = [
       "employee entry into the back office for order and content processing;",
       "seller entry into the cabinet for assortment and operational tasks;",
       "knowledge portal as a support point for sellers.",
-    ],
-  },
-  {
-    type: "section",
-    title: "My Scope",
-    paragraphs: ["I worked at the intersection of product logic, user scenarios, and interface detail."],
-    items: [
-      "collected requirements from business and internal teams;",
-      "ran CustDev with buyers, sellers, and employees;",
-      "analyzed offline sales, procurement, logistics, documents, and moderation processes;",
-      "formalized user scenarios into user stories, CJM, and user story mapping;",
-      "designed the information architecture of three product spaces;",
-      "created wireframes, UI mockups, and the design system;",
-      "prepared MVP solutions and separately documented post-MVP functionality.",
     ],
   },
   {
@@ -518,13 +489,12 @@ export const basisTelecomCaseEn: BasisTelecomBlock[] = [
     title: "Results",
     paragraphs: [
       "As a result, we designed a coherent B2B platform: the customer marketplace, back office, and seller cabinet were connected by shared logic for products, orders, companies, documents, statuses, and roles.",
-      "Research and process decomposition helped refine the initial business logic, reveal real pain points in logistics and communication, and make the product structure closer to actual user processes.",
+      "Research helped revise the initial business logic and align the product structure with real user processes. Some quantitative project data is not disclosed.",
     ],
     items: [
       "formed the design system and designed key screens across three product spaces;",
       "improved the high-level application structure and buyer account experience;",
-      "the back office helped reduce task time when working with orders;",
-      "the back-office interface simplified onboarding for new managers;",
+      "the back office simplified order operations and onboarding for new managers;",
       "10+ loyal Chinese manufacturers were ready to sell their products through the platform;",
       "identified interface-usage specifics among users in China;",
       "defined the MVP and post-MVP structure for further marketplace development.",

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Project } from "@/data/projects";
-import { localize, useLanguage } from "@/lib/language";
+import { useLanguage } from "@/lib/language";
 import { withBasePath } from "@/lib/paths";
 
 type MockProjectPreviewProps = {
@@ -9,15 +9,24 @@ type MockProjectPreviewProps = {
   size?: "hero" | "card" | "wide";
 };
 
-const CARD_PREVIEW_PADDING = {
-  hero: "p-5 sm:p-7",
-  card: "p-4 sm:p-5",
-} as const;
-
-const CARD_PREVIEW_INSET = {
-  hero: "inset-x-0 top-0 bottom-12 sm:bottom-16",
-  card: "inset-x-0 top-0 bottom-12",
-} as const;
+const HOVER_LABELS: Record<string, { ru: string; en: string }> = {
+  "rossko-enterprise-services": {
+    ru: "Системный enterprise UX",
+    en: "Enterprise systems UX",
+  },
+  "slabaem-musicians-platform": {
+    ru: "Монетизация стартапа",
+    en: "Startup monetization",
+  },
+  "basis-telecom-marketplace": {
+    ru: "B2B-маркетплейс с нуля",
+    en: "B2B marketplace from scratch",
+  },
+  "aromatny-mir-ecommerce": {
+    ru: "Рост e-commerce конверсии",
+    en: "E-commerce conversion growth",
+  },
+};
 
 export function MockProjectPreview({ project, size = "card" }: MockProjectPreviewProps) {
   const { language } = useLanguage();
@@ -25,8 +34,7 @@ export function MockProjectPreview({ project, size = "card" }: MockProjectPrevie
   const isHero = size === "hero";
   const isWide = size === "wide";
   const previewImage = project.previewImage ?? (project.slug === "slabaem-musicians-platform" ? "/screens/превью_слабаем.png" : null);
-  const previewPaddingClassName = isHero ? CARD_PREVIEW_PADDING.hero : CARD_PREVIEW_PADDING.card;
-  const previewInsetClassName = isHero ? CARD_PREVIEW_INSET.hero : CARD_PREVIEW_INSET.card;
+  const hoverLabel = HOVER_LABELS[project.slug]?.[language];
 
   return (
       <Link
@@ -36,16 +44,10 @@ export function MockProjectPreview({ project, size = "card" }: MockProjectPrevie
       }`}
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(255,255,255,0.08),transparent_32%),linear-gradient(135deg,rgba(255,255,255,0.08),transparent)]" />
-      <div className="absolute inset-x-0 bottom-0 z-10 h-28 bg-gradient-to-t from-[#2f2f2f] via-[#2f2f2f]/92 to-transparent" />
-      <div className={`absolute inset-x-0 bottom-0 z-20 flex items-end justify-between gap-4 p-5 ${isHero ? "sm:p-7" : ""}`}>
-        <h3 className="text-xl font-semibold tracking-tight text-white sm:text-2xl">{localizedProject.shortTitle}</h3>
-        <p className="shrink-0 text-right text-sm font-semibold text-white/50">{localizedProject.year}</p>
-      </div>
-
 
       {previewImage ? (
-        <div className={`absolute ${previewInsetClassName} ${previewPaddingClassName}`}>
-          <div className="relative h-full w-full overflow-hidden rounded-[1.25rem] border border-white/12 shadow-[0_22px_60px_rgba(0,0,0,0.46)]">
+        <div className="absolute inset-0 transition duration-500 group-hover:blur-[3px] group-focus-visible:blur-[3px]">
+          <div className="relative h-full w-full">
             <Image
               src={withBasePath(previewImage)}
               alt={language === "ru" ? `Превью кейса ${localizedProject.shortTitle}` : `${localizedProject.shortTitle} case preview`}
@@ -85,7 +87,14 @@ export function MockProjectPreview({ project, size = "card" }: MockProjectPrevie
           ))}
         </div>
       )}
-      <div className="absolute inset-0 opacity-0 transition group-hover:bg-black/15 group-hover:opacity-100" />
+      <div className="absolute inset-0 z-20 bg-black/0 opacity-0 transition duration-300 group-hover:bg-black/55 group-hover:opacity-100 group-focus-visible:bg-black/55 group-focus-visible:opacity-100" />
+      {hoverLabel ? (
+        <div className="pointer-events-none absolute inset-6 z-30 flex items-center justify-center text-center opacity-0 transition duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
+          <p className="text-xl font-semibold leading-tight tracking-[-0.02em] text-white drop-shadow-lg sm:text-2xl">
+            {hoverLabel}
+          </p>
+        </div>
+      ) : null}
     </Link>
   );
 }

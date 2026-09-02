@@ -39,7 +39,7 @@ export const slabaemPlusCase: SlabaemPlusBlock[] = [
   {
     type: "section",
     title: "Роль",
-    paragraphs: ["В рамках Plus я бы описал свою роль так:"],
+    paragraphs: ["В Plus я отвечал за продуктовую стратегию подписки, UX и систему оценки результата:"],
     items: [
       "сформулировал ценность платной подписки без ухудшения Free-опыта;",
       "разделил базовые ограничения и платные улучшения;",
@@ -246,7 +246,7 @@ export const slabaemPlusCase: SlabaemPlusBlock[] = [
     title: "Первые данные после запуска",
     paragraphs: [
       "После запуска Plus я смотрел не только на оплату, но и на то, как подписка влияет на поведение активных пользователей. Важно было доказать, что Plus действительно снижает трение, а не просто добавляет платный слой поверх старого сценария.",
-      "Первые 8 недель после релиза показали несколько устойчивых сигналов:",
+      "Первые 8 недель после релиза дали ранние сигналы. Из-за небольших абсолютных значений я не интерпретировал их как доказанную причинную связь:",
     ],
     items: [
       "из 254 показов предложения Plus 15 пользователей перешли к старту оплаты, конверсия составила 5,91%;",
@@ -254,7 +254,7 @@ export const slabaemPlusCase: SlabaemPlusBlock[] = [
       "доля бесплатных авторов, которые уперлись в лимит, составила 11,11% — 1 из 9 авторов;",
       "пользователи с Plus держали в среднем 1,2 активного объявления против 3,00 у Free-пользователей и 2,43 в предыдущем периоде;",
       "пользователи с Plus создавали в среднем 2,7 сохраненного поиска против 0,33 у Free-пользователей и 0,13 в предыдущем периоде;",
-      "доля Plus-объявлений с 4+ фото составила 66,67% — 2 из 3 объявлений, что подтвердило ценность расширенного лимита фото;",
+      "доля Plus-объявлений с 4+ фото составила 66,67% — 2 из 3 объявлений; выборка слишком мала для итогового вывода;",
       "AI-черновик использовали в 29% новых объявлений Plus-пользователей, а 62% AI-черновиков после редактирования доходили до публикации;",
       "около 24% Plus-пользователей редактировали объявления позже чем через 3 дня после публикации, чаще всего обновляя состав, описание проекта или условия поиска;",
       "жалобы на рекламу среди Plus-пользователей не выросли и остались на уровне 0%.",
@@ -270,8 +270,8 @@ export const slabaemPlusCase: SlabaemPlusBlock[] = [
   {
     type: "section",
     title: "Результат",
-    paragraphs: ["Слабаем Plus стал первым понятным подписочным уровнем продукта.", "По итогам первых 2 месяцев он подтвердил ценность для активных пользователей без ухудшения базового Free-опыта:"],
-    items: ["итоговая чистая выручка после комиссии и налога составила 20 388 ₽;", "всего было 54 оплаты, средний чек составил 377,556 ₽;", "основной вклад в выручку дал Plus: 15 828 ₽ и 49 оплат;", "PRO дал 4 560 ₽ и 5 оплат, а закрепы в этом периоде не дали выручки;", "конверсия из показа предложения Plus в старт оплаты составила 5,91%;", "конверсия из старта оплаты в успешную оплату составила 63,89%;", "количество сохраненных поисков у Plus-пользователей было в среднем в 2,7 раза выше, чем у активных Free-пользователей;", "Plus создал основу для регулярной подписочной выручки без агрессивного платного барьера и без просадки ключевого Free-сценария."],
+    paragraphs: ["Слабаем Plus стал первым подписочным уровнем продукта.", "Первые 2 месяца показали платный спрос и дали данные для следующих итераций:"],
+    items: ["итоговая чистая выручка после комиссии и налога составила 20 388 ₽;", "всего было 54 оплаты, средний чек — около 378 ₽;", "основной вклад в выручку дал Plus: 15 828 ₽ и 49 оплат;", "PRO дал 4 560 ₽ и 5 оплат, а закрепы в этом периоде не дали выручки;", "конверсия из показа предложения Plus в старт оплаты составила 5,91%;", "конверсия из старта оплаты в успешную оплату составила 63,89%;", "Plus-пользователи создавали в среднем 2,7 сохраненного поиска против 0,33 у активных Free-пользователей;", "результаты стали ранним сигналом спроса на подписку без агрессивного платного барьера."],
   },
   {
     type: "section",
@@ -308,7 +308,7 @@ export const slabaemPlusCaseEn: SlabaemPlusBlock[] = [
   {
     type: "section",
     title: "Role",
-    paragraphs: ["Within Plus, I would describe my role as follows:"],
+    paragraphs: ["For Plus, I owned subscription strategy, UX, and the outcome measurement framework:"],
     items: [
       "defined the value of a paid subscription without degrading the Free experience;",
       "separated baseline limitations from paid improvements;",
@@ -515,7 +515,7 @@ export const slabaemPlusCaseEn: SlabaemPlusBlock[] = [
     title: "Early Data After Launch",
     paragraphs: [
       "After launching Plus, I looked not only at payments, but also at how the subscription changed active-user behavior. It was important to prove that Plus reduced friction rather than simply adding a paid layer on top of the old scenario.",
-      "The first 8 weeks after release showed several stable signals:",
+      "The first 8 weeks produced early signals. Because absolute values were small, I did not treat them as proof of causality:",
     ],
     items: [
       "out of 254 upsell impressions, 15 users moved to payment start, giving a 5.91% conversion rate;",
@@ -523,7 +523,7 @@ export const slabaemPlusCaseEn: SlabaemPlusBlock[] = [
       "the share of Free authors who hit the limit reached 11.11%: 1 out of 9 authors;",
       "Plus users had 1.2 active posts on average versus 3.00 for Free users and 2.43 in the previous period;",
       "Plus users created 2.7 saved searches on average versus 0.33 for Free users and 0.13 in the previous period;",
-      "the share of Plus posts with 4+ photos reached 66.67%: 2 out of 3 posts, confirming the value of the expanded photo limit;",
+      "the share of Plus posts with 4+ photos reached 66.67%: 2 out of 3 posts; the sample was too small for a final conclusion;",
       "AI draft was used in 29% of new Plus-user posts, and 62% of edited AI drafts reached publication;",
       "around 24% of Plus users edited posts later than 3 days after publication, most often updating lineup, project description, or search conditions;",
       "ad complaints among Plus users did not grow and remained at 0%.",
@@ -539,8 +539,8 @@ export const slabaemPlusCaseEn: SlabaemPlusBlock[] = [
   {
     type: "section",
     title: "Result",
-    paragraphs: ["Slabaem Plus became the product’s first clear subscription tier.", "After the first 2 months, it confirmed value for active users without worsening the baseline Free experience:"],
-    items: ["net revenue after commission and tax reached 20,388 RUB;", "there were 54 total payments, with an average check of 377.556 RUB;", "Plus contributed the main share of revenue: 15,828 RUB and 49 payments;", "PRO contributed 4,560 RUB and 5 payments, while pins generated no revenue in this period;", "conversion from upsell impression to payment start reached 5.91%;", "conversion from payment start to successful payment reached 63.89%;", "Plus users had 2.7x more saved searches on average than active Free users;", "Plus created a foundation for recurring subscription revenue without an aggressive paywall or degradation of the core Free scenario."],
+    paragraphs: ["Slabaem Plus became the product’s first subscription tier.", "The first 2 months showed paid demand and provided data for further iterations:"],
+    items: ["net revenue after commission and tax reached 20,388 RUB;", "there were 54 total payments, with an average check of about 378 RUB;", "Plus contributed the main share of revenue: 15,828 RUB and 49 payments;", "PRO contributed 4,560 RUB and 5 payments, while pins generated no revenue in this period;", "conversion from upsell impression to payment start reached 5.91%;", "conversion from payment start to successful payment reached 63.89%;", "Plus users created 2.7 saved searches on average versus 0.33 among active Free users;", "the results provided an early demand signal for a subscription without an aggressive paywall."],
   },
   {
     type: "section",

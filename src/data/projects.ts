@@ -62,9 +62,9 @@ export const projects: Project[] = [
     accent: "#d65cff",
     problem:
       "Внутренним командам требовались интерфейсы для сложных операционных, логистических и регламентированных процессов с большим количеством состояний системы.",
-    role: "Senior Product Designer: System Design, UX-архитектура, пользовательские сценарии, UX-спецификации и документация.",
+    role: "Senior Product Designer: системная UX-архитектура, фасилитация решений и спецификации для разработки.",
     process:
-      "Проектировал процессы для «Честного Знака», ГИС ЭПД, ЭТрН, ЭЗЗ и документов экспедитора совместно с аналитиками, разработчиками и продуктовыми командами.",
+      "Переводил требования к «Честному Знаку», ГИС ЭПД, ЭТрН, ЭЗЗ и документам экспедитора в согласованные сценарии, состояния и ограничения.",
     cornerCases:
       "Ошибки интеграций, регламентированные статусы документов, мобильные сценарии, ограничения ролей, невалидные данные и восстановление после системных ошибок.",
     result:
@@ -79,9 +79,9 @@ export const projects: Project[] = [
 
         problem:
           "Internal teams needed interfaces for complex operational, logistics, and regulated workflows with many system states.",
-        role: "Senior Product Designer: System Design, UX architecture, user scenarios, UX specifications, and documentation.",
+        role: "Senior Product Designer: systems UX architecture, decision facilitation, and engineering-ready specifications.",
         process:
-          "I designed workflows for Chestny ZNAK, GIS EPD, ETN, EZZ, and freight-forwarder documents together with analysts, developers, and product teams.",
+          "I translated requirements for Chestny ZNAK, GIS EPD, ETN, EZZ, and freight-forwarder documents into aligned flows, states, and constraints.",
         cornerCases:
           "Integration failures, regulated document statuses, mobile scenarios, role restrictions, invalid data, and recovery after system errors.",
         result:
@@ -101,8 +101,8 @@ export const projects: Project[] = [
             "decomposed business processes into user flows, system states, and errors",
             "designed interfaces for internal web services and adaptive mobile scenarios",
             "prepared UX specifications and project documentation",
-            "worked with analysts, developers, and product teams",
-            "participated in unifying UX patterns and architectural decisions",
+            "facilitated decisions with analysts, developers, and product teams",
+            "aligned UX patterns and architectural decisions across services",
           ],
           problemUser: [
             "users needed to perform regulated actions without room for error",
@@ -148,7 +148,7 @@ export const projects: Project[] = [
             "a strong UX specification helps align business, analytics, and development",
           ],
           conclusion: [
-            "The case demonstrates systemic UX work: a regulated process was decomposed into product logic, interface states, edge cases, and development-ready documentation.",
+             "The case demonstrates a senior systems role: aligning stakeholders and turning regulated processes into product logic, interface states, edge cases, and development-ready documentation.",
           ],
         },
       },
@@ -199,8 +199,8 @@ export const projects: Project[] = [
         "декомпозировал бизнес-процессы в user flow, состояния системы и ошибки",
         "проектировал интерфейсы внутренних веб-сервисов и адаптивные мобильные сценарии",
         "готовил UX-спецификации и проектную документацию",
-        "работал с аналитиками, разработчиками и продуктовыми командами",
-        "участвовал в унификации UX-паттернов и архитектурных решений",
+        "фасилитировал решения с аналитиками, разработчиками и продуктовыми командами",
+        "согласовывал UX-паттерны и архитектурные решения между сервисами",
       ],
       problemUser: [
         "пользователям нужно выполнять регламентированные действия без права на ошибку",
@@ -246,7 +246,7 @@ export const projects: Project[] = [
         "хорошая UX-спецификация помогает синхронизировать бизнес, аналитику и разработку",
       ],
       conclusion: [
-        "Кейс показывает работу с системным UX: регламентированный процесс был разложен на продуктовую логику, состояния интерфейса, edge-cases и документацию для разработки.",
+        "Кейс показывает senior-роль в системном UX: синхронизацию участников и перевод регламентированных процессов в продуктовую логику, состояния, исключения и документацию для разработки.",
       ],
     },
   },
@@ -263,9 +263,9 @@ export const projects: Project[] = [
     accent: "#5f7cff",
     problem:
       "Корпоративным клиентам требовалась B2B-платформа для подбора телеком-оборудования, покупки и управления заказами с понятной логикой MVP.",
-    role: "Senior Product Designer: UX/UI, CustDev, MVP с нуля, информационная архитектура, UX-документация.",
+    role: "Senior Product Designer: discovery, продуктовая архитектура, приоритизация MVP и передача решений в разработку.",
     process:
-      "Проводил CustDev-интервью, проектировал сценарии покупки и управления заказами, формировал UX-гипотезы, запускал A/B-тесты и развивал документацию в Confluence.",
+      "Связывал исследования и бизнес-требования с архитектурой трех продуктовых пространств, разделял MVP и post-MVP и сопровождал решения в Scrum-команде.",
     cornerCases:
       "Корпоративные роли, разные типы заказов, недоступные позиции, изменение условий поставки, статусы заказа и технические ограничения каталога.",
     result:
@@ -280,9 +280,9 @@ export const projects: Project[] = [
 
         problem:
           "Corporate clients needed a B2B platform for finding telecom equipment, purchasing it, and managing orders with a clear MVP logic.",
-        role: "Senior Product Designer: UX/UI, CustDev, MVP from scratch, information architecture, UX documentation.",
+        role: "Senior Product Designer: discovery, product architecture, MVP prioritization, and engineering handoff.",
         process:
-          "I ran CustDev interviews, designed purchase and order-management scenarios, formed UX hypotheses, launched A/B tests, and developed UX documentation in Confluence.",
+          "I connected research and business requirements to the architecture of three product spaces, separated MVP from post-MVP scope, and supported delivery in a Scrum team.",
         cornerCases:
           "Corporate roles, different order types, unavailable items, delivery-condition changes, order statuses, and technical catalogue constraints.",
         result:
@@ -367,7 +367,7 @@ export const projects: Project[] = [
     accent: "#ff6a3d",
     problem:
       "В пользовательских сценариях поиска, каталога, карточки товара и оформления заказа требовалось находить проблемные зоны и улучшать конверсию.",
-    role: "Senior Product Designer: UX-гипотезы, CJM, user flow, A/B-тесты, сопровождение релизов.",
+    role: "Product Designer: анализ воронки, UX-гипотезы, A/B-тесты и сопровождение релизов.",
     process:
       "Анализировал пользовательское поведение и продуктовые метрики, проектировал сценарии e-commerce-воронки и проверял решения через эксперименты.",
     cornerCases:
@@ -384,7 +384,7 @@ export const projects: Project[] = [
         year: "2019-2020",
         problem:
           "A mobile-first e-commerce flow needed clearer product discovery and product-page decisions to improve conversion without redesigning the whole store.",
-        role: "Senior Product Designer: UX hypotheses, CJM, user flow, A/B tests, and release support.",
+        role: "Product Designer: funnel analysis, UX hypotheses, A/B tests, and release support.",
         process:
           "I analyzed user behavior and product metrics, designed e-commerce funnel scenarios, and validated solutions through experiments.",
         cornerCases:
@@ -531,14 +531,14 @@ export const projects: Project[] = [
     shortTitle: "Слабаем!",
     category: "product",
     industry: "Продукт / музыкальная платформа",
-    company: "Пет-проект",
+    company: "Собственный стартап",
     categoryTag: { ru: "Продукт", en: "Product" },
-    year: "2023-2025",
+    year: "2023-настоящее время",
     website: "https://slabaem.space/",
     accent: "#18c37d",
     problem:
       "Музыкантам и группам нужен был сервис для поиска друг друга, проверки гипотезы спроса и развития органического привлечения.",
-    role: "Product owner / designer / fullstack developer: исследование, UX, запуск, разработка и развитие продукта.",
+    role: "Основатель / Senior Product Designer / Full-stack developer: стратегия, UX, разработка, запуск и развитие продукта.",
     process:
       "Исследовал рынок, проверял продуктовую гипотезу, проектировал интерфейсы, развивал монетизацию, SEO, воронки и аналитику пользовательского поведения.",
     cornerCases: "Разные роли участников, пустые города, неактивные профили, монетизация, модерация, SEO-страницы и обратная связь пользователей.",
@@ -549,12 +549,12 @@ export const projects: Project[] = [
         title: "Slabaem! Musician Discovery Platform",
         shortTitle: "Slabaem!",
         industry: "Product / music platform",
-        company: "Pet product",
+        company: "Own startup",
 
-        year: "2023-2025",
+        year: "2023-present",
         problem:
           "Musicians and bands needed a service for finding each other, validating demand, and developing organic acquisition.",
-        role: "Product owner / designer / fullstack developer: research, UX, launch, development, and product growth.",
+        role: "Founder / Senior Product Designer / Full-stack developer: strategy, UX, engineering, launch, and product growth.",
         process:
           "I researched the market, validated the product hypothesis, designed interfaces, and developed monetization, SEO, funnels, and behavioral analytics.",
         cornerCases: "Different participant roles, empty cities, inactive profiles, monetization, moderation, SEO pages, and user feedback.",

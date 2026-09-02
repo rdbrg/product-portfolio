@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin", "cyrillic"], variable: "--font-inter" }
 const siteUrl = "https://rdbrg.github.io/product-portfolio";
 const title = "Вадим Родберг | Senior Product Designer";
 const description =
-  "Senior Product Designer с 7-летним опытом в e-commerce, B2B и enterprise-продуктах. System Design, UX Architecture, research, flow и продуктовые метрики.";
+  "Senior Product Designer с 7-летним опытом в B2B, enterprise и e-commerce: продуктовая стратегия, системный UX, исследования, запуск и развитие по метрикам.";
 const previewImage = `${siteUrl}/foto.png`;
 
 export const metadata: Metadata = {
