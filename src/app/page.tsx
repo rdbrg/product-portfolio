@@ -27,6 +27,12 @@ const content = {
       line2After: "и защищаю продуктовые решения",
     },
     skillsTitle: "Senior-функции",
+    channel: {
+      eyebrow: "Telegram-канал",
+      title: "Пишу о UX и продуктовой логике",
+      text: "Разбираю интерфейсные решения, которые кажутся мелочами, но влияют на весь продукт: поведение пользователей, метрики и бизнес. UX без магии и вкусовщины.",
+      link: "Читать Rodberg Design",
+    },
     casesTitle: "Продуктовые кейсы",
     experienceTitle: "Опыт",
     finalBefore: "Открыт к",
@@ -93,6 +99,12 @@ const content = {
       line2After: "and defend product decisions",
     },
     skillsTitle: "Senior responsibilities",
+    channel: {
+      eyebrow: "Telegram channel",
+      title: "I write about UX and product logic",
+      text: "I examine familiar interface decisions, UX anti-patterns, and their hidden consequences for users and businesses.",
+      link: "Read Rodberg Design",
+    },
     casesTitle: "Product cases",
     experienceTitle: "Experience",
     finalBefore: "Open to a",
@@ -193,6 +205,26 @@ export default function Home() {
             </span>
           ))}
         </div>
+      </section>
+
+      <section className="mx-auto max-w-[1800px] px-6 py-8 sm:px-10 lg:px-14">
+        <a
+          href="https://t.me/RodbergDesign"
+          target="_blank"
+          rel="noreferrer"
+          className="group block rounded-[1.75rem] border border-white/10 bg-[#1d1d1d] p-7 transition hover:border-purple/50 hover:bg-[#242024] sm:p-9"
+        >
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-purple">{t.channel.eyebrow}</p>
+          <div className="mt-5 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+            <div className="max-w-3xl">
+              <h2 className="text-[clamp(1.6rem,2.45vw,2.35rem)] font-semibold leading-tight tracking-[-0.03em]">{t.channel.title}</h2>
+              <p className="mt-4 text-lg leading-8 text-white/62">{t.channel.text}</p>
+            </div>
+            <span className="shrink-0 text-lg font-semibold text-white transition group-hover:text-purple">
+              {t.channel.link} →
+            </span>
+          </div>
+        </a>
       </section>
 
       <section id="product-cases" className="mx-auto max-w-[1800px] px-6 py-20 sm:px-10 lg:px-14">
