@@ -212,7 +212,7 @@ function ScreenPreview({ screen, language, onClose }: { screen: PreviewScreen | 
   );
 }
 
-function TextBlock({ block }: { block: Extract<SlabaemPlusBlock, { type: "section" }> }) {
+function TextBlock({ block, language, onPreview }: { block: Extract<SlabaemPlusBlock, { type: "section" }>; language: Language; onPreview: (screen: PreviewScreen) => void }) {
   const sectionLabels = new Set(["Продуктовые:", "Монетизация:", "Качество и guardrails:", "Product metrics:", "Monetization:", "Quality and guardrails:"]);
 
   return (
@@ -235,6 +235,19 @@ function TextBlock({ block }: { block: Extract<SlabaemPlusBlock, { type: "sectio
                 ),
               )}
             </ul>
+          ) : null}
+          {block.image ? (
+            <button
+              type="button"
+              onClick={() => onPreview({ label: block.title, src: block.image! })}
+              className="group relative block w-full overflow-hidden rounded-2xl border border-white/10 bg-white text-left outline-none transition hover:-translate-y-0.5 hover:border-white/30 focus-visible:ring-2 focus-visible:ring-purple"
+              aria-label={language === "ru" ? `Открыть превью: ${block.title}` : `Open preview: ${block.title}`}
+            >
+              <Image src={withBasePath(block.image)} alt={block.title} width={2000} height={1100} className="h-auto w-full object-contain" />
+              <span className="absolute inset-0 flex items-center justify-center bg-black/0 opacity-0 transition group-hover:bg-black/25 group-hover:opacity-100 group-focus-visible:bg-black/25 group-focus-visible:opacity-100">
+                <span className="rounded-full bg-white/90 px-4 py-2 text-sm font-semibold text-black">{language === "ru" ? "Открыть" : "Open"}</span>
+              </span>
+            </button>
           ) : null}
         </div>
       </div>
@@ -269,7 +282,7 @@ export function SlabaemPlusCase() {
             return <ScreensBlock key={`${block.type}-${index}`} items={block.items} sourceItems={sourceItems} language={language} onPreview={setPreviewScreen} />;
           }
 
-          return <TextBlock key={`${block.type}-${index}`} block={block} />;
+          return <TextBlock key={`${block.type}-${index}`} block={block} language={language} onPreview={setPreviewScreen} />;
         })}
       </div>
       <ScreenPreview screen={previewScreen} language={language} onClose={() => setPreviewScreen(null)} />

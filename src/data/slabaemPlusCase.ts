@@ -9,6 +9,7 @@ export type SlabaemPlusBlock =
       title: string;
       paragraphs?: string[];
       items?: string[];
+      image?: string;
     }
   | {
       type: "screens";
@@ -87,6 +88,7 @@ export const slabaemPlusCase: SlabaemPlusBlock[] = [
       "6. Возврат к задаче: после оплаты лимит снимается, а Plus-статус подтверждает доступ; пользователь продолжает публикацию, настройку радаров или редактирование без повторного поиска нужного места.",
       "Измеримый эффект: 5,91% показов предложения привели к старту оплаты, 63,89% стартов оплаты завершились успешно, а Plus-пользователи создавали в среднем 2,7 радара против 0,33 у активных Free-пользователей.",
     ],
+    image: "/screens/cjm-free-to-plus.jpg",
   },
   {
     type: "section",
@@ -372,6 +374,7 @@ export const slabaemPlusCaseEn: SlabaemPlusBlock[] = [
       "6. Return to the task: after payment, the limit is removed and Plus status confirms access; the user continues publishing, configuring radars, or editing without finding the entry point again.",
       "Measured effect: 5.91% of upsell impressions led to payment start, 63.89% of payment starts ended successfully, and Plus users created 2.7 search radars on average versus 0.33 among active Free users.",
     ],
+    image: "/screens/cjm-free-to-plus.jpg",
   },
   {
     type: "section",
