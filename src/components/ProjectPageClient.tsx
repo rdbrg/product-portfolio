@@ -68,6 +68,13 @@ export function ProjectPageClient({ project }: ProjectPageClientProps) {
         <CaseSection title={language === "ru" ? "Проблема со стороны пользователей" : "User Problem"} items={localizedProject.caseStudy.problemUser} />
         <CaseSection title={language === "ru" ? "Проблема со стороны бизнеса" : "Business Problem"} items={localizedProject.caseStudy.problemBusiness} />
         <CaseSection title={language === "ru" ? "Исследования и инсайты" : "Research and Insights"} items={localizedProject.caseStudy.research} />
+        {localizedProject.caseStudy.cjm ? (
+          <CaseSection
+            title={language === "ru" ? "CJM и улучшение UX" : "CJM and UX Improvement"}
+            items={localizedProject.caseStudy.cjm}
+            image={project.slug === "rossko-enterprise-services" ? { src: "/screens/cjm-regulated-task-flow.png", alt: language === "ru" ? "CJM регламентированной операции" : "Regulated Task CJM" } : undefined}
+          />
+        ) : null}
         <CaseSection title={language === "ru" ? "Гипотеза" : "Hypothesis"} items={localizedProject.caseStudy.hypothesis} />
         <CaseSection title={language === "ru" ? "Решение" : "Solution"} items={localizedProject.caseStudy.solution} columns />
         <CaseSection title={language === "ru" ? "Проверка" : "Validation"} items={localizedProject.caseStudy.validation} />

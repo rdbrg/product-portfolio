@@ -39,6 +39,7 @@ export type Project = {
     problemUser: string[];
     problemBusiness: string[];
     research: string[];
+    cjm?: string[];
     hypothesis: string[];
     solution: string[];
     validation: string[];
@@ -121,6 +122,14 @@ export const projects: Project[] = [
             "identified roles, statuses, errors, exceptions, and dependencies on external systems before designing screens",
             "comparison of web and mobile usage scenarios",
             "use of a process experience map (XPM) and event storming to describe domain logic before designing the interface layer",
+          ],
+          cjm: [
+            "1. Start a regulated task: an employee receives an operational task, but the next step depends on their role, document type, and the current system status.",
+            "2. Prepare data and documents: information is collected across 1C, internal services, and external systems; the main UX risk is missing or invalid data.",
+            "3. Submit and validate: the action is sent to Chestny ZNAK, GIS EPD, or another integration; the interface must clearly separate processing, success, and rejection states.",
+            "4. Resolve exceptions: instead of a dead end, the employee sees the cause, available correction, and a safe way to repeat the action.",
+            "5. Complete and track: the final document status, responsible role, and next operational step remain visible in one process model.",
+            "UX improvement: the XPM connected employee actions, emotions, system events, and failure points, while unified state and error patterns reduced ambiguity. The effect is described qualitatively because numerical before/after data is not disclosed.",
           ],
           hypothesis: [
             "If a complex regulated process is decomposed into clear steps, states, and errors, employees will complete tasks faster and ask fewer clarification questions.",
@@ -219,6 +228,14 @@ export const projects: Project[] = [
         "до проектирования экранов выявлялись роли, статусы, ошибки, исключения и зависимости от внешних систем",
         "сравнение сценариев веб- и мобильного использования",
         "использование карты процесс-опыта (XPM) и event storming для описания доменной логики до проектирования интерфейсного слоя",
+      ],
+      cjm: [
+        "1. Старт регламентированной задачи: сотрудник получает операционную задачу, но следующий шаг зависит от роли, типа документа и текущего статуса системы.",
+        "2. Подготовка данных и документов: информация собирается в 1C, внутренних сервисах и внешних системах; основной UX-риск — неполные или невалидные данные.",
+        "3. Отправка и проверка: действие уходит в «Честный Знак», ГИС ЭПД или другую интеграцию; интерфейс должен явно разделять обработку, успех и отклонение.",
+        "4. Исправление исключений: вместо тупика сотрудник видит причину, доступное исправление и безопасный способ повторить действие.",
+        "5. Завершение и контроль: итоговый статус документа, ответственная роль и следующий операционный шаг остаются видимыми в единой модели процесса.",
+        "Улучшение UX: XPM связала действия сотрудника, его опыт, системные события и точки отказа, а единые паттерны статусов и ошибок снизили неоднозначность. Эффект описан качественно, поскольку числовые данные до/после не раскрываются.",
       ],
       hypothesis: [
         "Если сложный регламентированный процесс разложить на понятные шаги, состояния и ошибки, сотрудники смогут быстрее выполнять задачи и реже обращаться за уточнениями.",
@@ -423,6 +440,13 @@ export const projects: Project[] = [
             "product-page analysis showed that price, availability, and delivery information were checked before users moved to add-to-cart",
             "we mapped the journey from entry to product decision and separated navigation problems from product-card clarity problems",
           ],
+          cjm: [
+            "1. Entry and location: the user opens the store and needs to understand which assortment is available in their city or pickup point.",
+            "2. Catalogue scan: before the change, price, promotion, and availability competed for attention; the revised card hierarchy made relevant products easier to compare.",
+            "3. Filtering: users previously looped through repeated filter changes; clearer entry points and availability signals shortened the path to a confident choice.",
+            "4. Product decision: price, availability, delivery, and the CTA were brought together so the page answered the main purchase questions in one area.",
+            "5. Move to purchase: the user adds the item to cart and proceeds to the existing checkout; this iteration improved the journey leading to checkout rather than redesigning it.",
+          ],
           hypothesis: [
             "If the catalogue makes availability, price, and promo information easier to scan, more users will open relevant product pages instead of looping through filters.",
             "If the product page brings price, availability, delivery, and the main CTA closer together, users will add products to cart more often.",
@@ -441,10 +465,10 @@ export const projects: Project[] = [
             "post-release review with analytics and development to separate UX effect from promotion and seasonality noise",
           ],
           results: [
-            "product-page open rate from catalogue increased by 9.6%",
-            "add-to-cart conversion from product pages increased by 12.4%",
-            "checkout-start rate increased by 6.8%",
-            "repeated filter changes per session decreased by 11%, which indicated a more confident product-selection path",
+            "product-page open rate from catalogue increased by 9.6 percentage points",
+            "add-to-cart conversion from product pages increased by 12.4 percentage points",
+            "checkout-start rate increased by 6.8 percentage points",
+            "repeated filter changes per session decreased by 11 percentage points, which indicated a more confident product-selection path",
             "no negative impact was detected on bounce rate or page performance guardrails",
           ],
           insights: [
@@ -491,6 +515,13 @@ export const projects: Project[] = [
         "на карточке товара пользователи в первую очередь проверяли цену, наличие и условия получения до добавления в корзину",
         "я разложил путь от входа до выбора товара и отделил проблемы навигации от проблем ясности карточки",
       ],
+      cjm: [
+        "1. Вход и геолокация: пользователь открывает магазин и должен понять, какой ассортимент доступен в его городе или точке самовывоза.",
+        "2. Просмотр каталога: до изменений цена, промо и наличие конкурировали за внимание; новая иерархия карточки упростила сравнение релевантных товаров.",
+        "3. Фильтрация: раньше пользователь возвращался к фильтрам по кругу; заметные точки входа и сигналы наличия сократили путь к уверенному выбору.",
+        "4. Решение на карточке товара: цена, наличие, получение и CTA были собраны рядом, чтобы основные вопросы покупки решались в одной зоне.",
+        "5. Переход к покупке: пользователь добавляет товар в корзину и переходит в существующий checkout; итерация улучшала путь до checkout, а не перерабатывала его.",
+      ],
       hypothesis: [
         "Если в каталоге сделать наличие, цену и промо легче считываемыми, больше пользователей будут открывать релевантные карточки товаров, а не возвращаться к фильтрам.",
         "Если на карточке товара приблизить цену, наличие, получение и CTA друг к другу, пользователи будут чаще добавлять товар в корзину.",
@@ -509,10 +540,10 @@ export const projects: Project[] = [
         "после теста результат сверялся с аналитиками и разработчиками, чтобы отделить эффект UX от промо и сезонности",
       ],
       results: [
-        "open rate карточки товара из каталога вырос на 9,6%",
-        "add-to-cart conversion с карточки товара вырос на 12,4%",
-        "checkout-start rate вырос на 6,8%",
-        "повторные изменения фильтров в рамках сессии снизились на 11%, что показало более уверенный путь выбора",
+        "open rate карточки товара из каталога вырос на 9,6 процентного пункта",
+        "add-to-cart conversion с карточки товара вырос на 12,4 процентного пункта",
+        "checkout-start rate вырос на 6,8 процентного пункта",
+        "повторные изменения фильтров в рамках сессии снизились на 11 процентных пунктов, что показало более уверенный путь выбора",
         "негативного влияния на bounce rate и скорость страниц по guardrail-метрикам не обнаружили",
       ],
       insights: [

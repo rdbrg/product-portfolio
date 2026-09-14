@@ -74,6 +74,22 @@ export const slabaemPlusCase: SlabaemPlusBlock[] = [
   },
   {
     type: "section",
+    title: "CJM: от Free к Plus",
+    paragraphs: [
+      "Путь строился не вокруг отдельного экрана подписки, а вокруг момента, когда активный пользователь сталкивается с реальным ограничением и может продолжить задачу без давления.",
+    ],
+    items: [
+      "1. Базовый сценарий: пользователь бесплатно публикует объявление, ищет музыкантов или сохраняет один поисковый радар; для нерегулярного использования этого достаточно.",
+      "2. Рост потребности: активный музыкант ведет несколько поисков, хочет добавить больше контекста или чаще получать новые результаты.",
+      "3. Точка трения: пользователь достигает лимита объявлений, фото или радаров либо хочет отредактировать публикацию спустя 3 дня.",
+      "4. Контекстное предложение: интерфейс объясняет конкретное ограничение и показывает Plus как способ продолжить текущую задачу, а не как абстрактный тариф.",
+      "5. Сравнение и оплата: пользователь видит различия Free и Plus, выбирает подписку и проходит платежную воронку.",
+      "6. Возврат к задаче: после оплаты лимит снимается, а Plus-статус подтверждает доступ; пользователь продолжает публикацию, настройку радаров или редактирование без повторного поиска нужного места.",
+      "Измеримый эффект: 5,91% показов предложения привели к старту оплаты, 63,89% стартов оплаты завершились успешно, а Plus-пользователи создавали в среднем 2,7 радара против 0,33 у активных Free-пользователей.",
+    ],
+  },
+  {
+    type: "section",
     title: "Важно",
     paragraphs: [
       "При этом важно было не превратить Free в «сломанный» продукт. Базовый опыт должен оставаться полезным, а Plus должен восприниматься как спокойное расширение возможностей.",
@@ -339,6 +355,22 @@ export const slabaemPlusCaseEn: SlabaemPlusBlock[] = [
       "ad blocks added noise to the interface;",
       "saved searches were limited, and notifications arrived less often;",
       "writing a post required effort, especially when users did not know how to formulate a request.",
+    ],
+  },
+  {
+    type: "section",
+    title: "CJM: From Free to Plus",
+    paragraphs: [
+      "The journey was designed around the moment when an active user encounters a real limitation and can continue the task without pressure, not around a standalone subscription screen.",
+    ],
+    items: [
+      "1. Baseline scenario: the user publishes a post, searches for musicians, or saves one search radar for free; this is enough for occasional use.",
+      "2. Growing need: an active musician runs several searches, wants to add more context, or needs fresher matching results.",
+      "3. Friction point: the user reaches the post, photo, or radar limit, or wants to edit a publication after 3 days.",
+      "4. Contextual offer: the interface explains the specific limitation and presents Plus as a way to continue the current task rather than as an abstract plan.",
+      "5. Comparison and payment: the user reviews the Free and Plus differences, selects the subscription, and goes through the payment funnel.",
+      "6. Return to the task: after payment, the limit is removed and Plus status confirms access; the user continues publishing, configuring radars, or editing without finding the entry point again.",
+      "Measured effect: 5.91% of upsell impressions led to payment start, 63.89% of payment starts ended successfully, and Plus users created 2.7 search radars on average versus 0.33 among active Free users.",
     ],
   },
   {

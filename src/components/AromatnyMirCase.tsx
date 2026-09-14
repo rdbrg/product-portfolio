@@ -54,6 +54,7 @@ export function AromatnyMirCase({ project }: { project: Project }) {
         <TextBlock title={language === "ru" ? "Проблема со стороны пользователей" : "User Problem"} items={localizedProject.caseStudy.problemUser} />
         <TextBlock title={language === "ru" ? "Проблема со стороны бизнеса" : "Business Problem"} items={localizedProject.caseStudy.problemBusiness} />
         <TextBlock title={language === "ru" ? "Исследования и инсайты" : "Research and Insights"} items={localizedProject.caseStudy.research} />
+        {localizedProject.caseStudy.cjm ? <TextBlock title={language === "ru" ? "CJM: путь выбора товара" : "CJM: Product Selection Journey"} items={localizedProject.caseStudy.cjm} /> : null}
         <ScreensBlock items={[screens[1]]} language={language} onPreview={setPreviewScreen} />
 
         <TextBlock title={language === "ru" ? "Гипотеза" : "Hypothesis"} items={localizedProject.caseStudy.hypothesis} />

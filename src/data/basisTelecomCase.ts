@@ -9,6 +9,7 @@ export type BasisTelecomBlock =
       title: string;
       paragraphs?: string[];
       items?: string[];
+      image?: BasisTelecomScreen;
     }
   | {
       type: "screens";
@@ -131,6 +132,22 @@ export const basisTelecomCase: BasisTelecomBlock[] = [
   },
   {
     type: "section",
+    title: "CJM: путь корпоративной закупки",
+    paragraphs: [
+      "CJM был собран из CustDev и разбора текущего процесса закупки. Он связал действия покупателя с работой менеджеров и продавцов и показал, что UX-разрывы возникают не только при выборе товара, но и после оформления заказа.",
+    ],
+    items: [
+      "1. Возникновение потребности: компании нужно оборудование под техническую задачу, но единой точки входа и прозрачного ассортимента нет — маркетплейс собирает категории и поиск в одном месте;",
+      "2. Подбор и сравнение: характеристики, наличие и условия поставки разрознены — фильтры и карточка товара помогают сопоставить варианты в контексте B2B-закупки;",
+      "3. Внутреннее согласование: в решении участвуют несколько сотрудников, важны реквизиты и условия — личный кабинет сохраняет данные компании и контекст заказа;",
+      "4. Оформление: документы и детали поставки раньше уточнялись вручную — checkout объединяет состав заказа, компанию и условия в последовательный flow;",
+      "5. Исполнение и контроль: покупателю не хватает прозрачности после заказа — кабинет показывает состав, статусы и следующие действия, а бэкофис дает менеджеру тот же операционный контекст;",
+      "6. Повторная закупка и поддержка: история компании, заказов и документов остается в системе, снижая зависимость от разрозненной переписки и конкретного менеджера.",
+    ],
+    image: screen("cjm", "CJM корпоративной закупки: путь покупателя от потребности до повторного заказа и поддержки.", "Corporate procurement CJM: the buyer journey from need to repeat purchase and support."),
+  },
+  {
+    type: "section",
     title: "Главный инсайт",
     paragraphs: [
       "Маркетплейс нельзя было проектировать как обычный e-commerce. В B2B-покупке телеком-оборудования ценность создается не только витриной и карточкой товара, а всей цепочкой: подбор, условия, документы, логистика, статусы, менеджеры, продавцы и внутренний контроль.",
@@ -144,6 +161,22 @@ export const basisTelecomCase: BasisTelecomBlock[] = [
       "1. Покупатель: сделать сложную закупку похожей на понятный e-commerce flow, но сохранить B2B-детали заказа, компании и поставки;",
       "2. Бэкофис: превратить офлайн-операции сотрудников в рабочую систему с заказами, компаниями, документами, товарами и коэффициентами;",
       "3. Продавец: спроектировать CRM-подобный кабинет, где поставщик управляет товарами, финансами, документами, аналитикой и продвижением.",
+    ],
+  },
+  {
+    type: "section",
+    title: "Дизайн-система и UI-кит",
+    paragraphs: [
+      "Для маркетплейса, бэкофиса и кабинета продавца я создал общую дизайн-систему. Она позволила сохранить единый язык интерфейса в трех продуктах с разной плотностью данных, ролями и сценариями.",
+      "Система включала 40+ переиспользуемых компонентов и их состояния. Количественные показатели скорости разработки находятся под NDA, поэтому результат зафиксирован через подтвержденный масштаб библиотеки и покрытие запущенных продуктов.",
+    ],
+    items: [
+      "базовые токены цвета, типографики, отступов, сетки и визуальной иерархии;",
+      "компоненты навигации, форм, таблиц, фильтров, карточек, загрузки файлов и системной обратной связи;",
+      "состояния loading, empty, error, disabled и success для основных сценариев;",
+      "паттерны плотных операционных интерфейсов бэкофиса и более легких покупательских сценариев;",
+      "единые правила для статусов товаров, заказов, документов и модерации;",
+      "описание поведения и передача компонентов разработке для последовательной реализации и дальнейшего масштабирования.",
     ],
   },
   {
@@ -270,11 +303,11 @@ export const basisTelecomCase: BasisTelecomBlock[] = [
     type: "section",
     title: "Результаты",
     paragraphs: [
-      "В результате была спроектирована целостная B2B-платформа: клиентский маркетплейс, бэкофис и кабинет продавца связаны общей логикой товаров, заказов, компаний, документов, статусов и ролей.",
+      "В релиз вошли три связанных продукта: клиентский маркетплейс, бэкофис и кабинет продавца. Они объединены общей логикой товаров, заказов, компаний, документов, статусов и ролей; рекламный кабинет и обучающий портал остались в post-MVP контуре.",
       "Исследования помогли скорректировать исходную бизнес-логику и приблизить структуру продукта к реальным процессам пользователей. Часть количественных показателей проекта не раскрывается.",
     ],
     items: [
-      "сформирована дизайн-система и отрисованы ключевые экраны трех продуктовых пространств;",
+      "создана дизайн-система из 40+ переиспользуемых компонентов для трех запущенных продуктовых пространств;",
       "улучшена верхнеуровневая структура приложения и личного кабинета покупателя;",
       "бэкофис упростил работу с заказами и онбординг новых менеджеров;",
       "получены 10+ лояльных китайских производителей, готовых сбывать продукцию через платформу;",
@@ -395,6 +428,22 @@ export const basisTelecomCaseEn: BasisTelecomBlock[] = [
   },
   {
     type: "section",
+    title: "CJM: Corporate Procurement Journey",
+    paragraphs: [
+      "The CJM was synthesized from CustDev and analysis of the existing procurement process. It connected buyer actions with manager and seller operations and showed that UX gaps appeared not only during product selection but also after order placement.",
+    ],
+    items: [
+      "1. Need emerges: a company needs equipment for a technical task, but there is no single entry point or transparent assortment; the marketplace brings categories and search together;",
+      "2. Selection and comparison: specifications, availability, and delivery terms are fragmented; filters and the product page help compare options in a B2B procurement context;",
+      "3. Internal approval: several employees participate in the decision, and company details and terms matter; the account preserves company data and order context;",
+      "4. Checkout: documents and delivery details were previously clarified manually; checkout combines order contents, company data, and terms into a sequential flow;",
+      "5. Fulfilment and control: buyers lack transparency after ordering; the account shows contents, statuses, and next steps, while the back office gives managers the same operational context;",
+      "6. Repeat purchase and support: company, order, and document history remains in the system, reducing dependence on fragmented communication and individual managers.",
+    ],
+    image: screen("cjm", "CJM корпоративной закупки: путь покупателя от потребности до повторного заказа и поддержки.", "Corporate procurement CJM: the buyer journey from need to repeat purchase and support."),
+  },
+  {
+    type: "section",
     title: "Main Insight",
     paragraphs: [
       "The marketplace could not be designed like standard e-commerce. In B2B telecom-equipment purchasing, value is created not only by the storefront and product card, but by the full chain: selection, terms, documents, logistics, statuses, managers, sellers, and internal control.",
@@ -408,6 +457,22 @@ export const basisTelecomCaseEn: BasisTelecomBlock[] = [
       "1. Buyer: make complex procurement feel like a clear e-commerce flow while preserving B2B details around orders, company data, and delivery;",
       "2. Back office: turn offline employee operations into a working system for orders, companies, documents, products, and coefficients;",
       "3. Seller: design a CRM-like cabinet where a supplier manages products, finances, documents, analytics, and promotion.",
+    ],
+  },
+  {
+    type: "section",
+    title: "Design System and UI Kit",
+    paragraphs: [
+      "I created a shared design system for the marketplace, back office, and seller cabinet. It preserved one interface language across three products with different data density, roles, and scenarios.",
+      "The system included 40+ reusable components and their states. Engineering-speed metrics are under NDA, so the result is expressed through the confirmed library scale and coverage of launched products.",
+    ],
+    items: [
+      "base tokens for color, typography, spacing, grids, and visual hierarchy;",
+      "navigation, form, table, filter, card, file-upload, and system-feedback components;",
+      "loading, empty, error, disabled, and success states for core scenarios;",
+      "patterns for dense back-office interfaces and lighter buyer-facing journeys;",
+      "shared rules for product, order, document, and moderation statuses;",
+      "behavior documentation and engineering handoff for consistent implementation and future scaling.",
     ],
   },
   {
@@ -488,11 +553,11 @@ export const basisTelecomCaseEn: BasisTelecomBlock[] = [
     type: "section",
     title: "Results",
     paragraphs: [
-      "As a result, we designed a coherent B2B platform: the customer marketplace, back office, and seller cabinet were connected by shared logic for products, orders, companies, documents, statuses, and roles.",
+      "Three connected products reached release: the customer marketplace, back office, and seller cabinet. They shared logic for products, orders, companies, documents, statuses, and roles; the advertising cabinet and knowledge portal remained in the post-MVP scope.",
       "Research helped revise the initial business logic and align the product structure with real user processes. Some quantitative project data is not disclosed.",
     ],
     items: [
-      "formed the design system and designed key screens across three product spaces;",
+      "created a design system of 40+ reusable components for three launched product spaces;",
       "improved the high-level application structure and buyer account experience;",
       "the back office simplified order operations and onboarding for new managers;",
       "10+ loyal Chinese manufacturers were ready to sell their products through the platform;",

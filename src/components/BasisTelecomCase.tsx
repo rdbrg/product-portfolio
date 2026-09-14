@@ -32,6 +32,7 @@ const realScreens: Record<string, string> = {
   shipments: "/screens/bazis/Управление отправками.png",
   ads: "/screens/bazis/Рекламный кабинет продавца.png",
   knowledgePortal: "/screens/knowlegeportal/обучающий портал.png",
+  cjm: "/screens/cjm-grid-container.jpg",
 };
 
 type PreviewScreen = {
@@ -151,7 +152,9 @@ function ScreenPreview({ screen, onClose }: { screen: PreviewScreen | null; onCl
   );
 }
 
-function TextBlock({ block }: { block: Extract<BasisTelecomBlock, { type: "section" }> }) {
+function TextBlock({ block, language, onPreview }: { block: Extract<BasisTelecomBlock, { type: "section" }>; language: Language; onPreview: (screen: PreviewScreen) => void }) {
+  const imageSrc = block.image ? realScreens[block.image.key] : undefined;
+
   return (
     <section className="border-t border-white/10 py-12">
       <div className="grid gap-8 lg:grid-cols-[0.34fr_0.66fr]">
@@ -166,6 +169,19 @@ function TextBlock({ block }: { block: Extract<BasisTelecomBlock, { type: "secti
                 </li>
               ))}
             </ul>
+          ) : null}
+          {block.image && imageSrc ? (
+            <button
+              type="button"
+              onClick={() => onPreview({ label: block.image!.label[language], src: imageSrc })}
+              className="group relative block w-full overflow-hidden rounded-2xl border border-white/10 bg-white text-left outline-none transition hover:-translate-y-0.5 hover:border-white/30 focus-visible:ring-2 focus-visible:ring-purple"
+              aria-label={language === "ru" ? `Открыть превью: ${block.image.label[language]}` : `Open preview: ${block.image.label[language]}`}
+            >
+              <Image src={withBasePath(imageSrc)} alt={block.image.label[language]} width={2000} height={1100} className="h-auto w-full object-contain" />
+              <span className="absolute inset-0 flex items-center justify-center bg-black/0 opacity-0 transition group-hover:bg-black/25 group-hover:opacity-100 group-focus-visible:bg-black/25 group-focus-visible:opacity-100">
+                <span className="rounded-full bg-white/90 px-4 py-2 text-sm font-semibold text-black">{language === "ru" ? "Открыть" : "Open"}</span>
+              </span>
+            </button>
           ) : null}
         </div>
       </div>
@@ -197,7 +213,7 @@ export function BasisTelecomCase() {
             return <ScreensBlock key={`${block.type}-${index}`} items={block.items} language={language} onPreview={setPreviewScreen} />;
           }
 
-          return <TextBlock key={`${block.type}-${index}`} block={block} />;
+          return <TextBlock key={`${block.type}-${index}`} block={block} language={language} onPreview={setPreviewScreen} />;
         })}
       </div>
       <ScreenPreview screen={previewScreen} onClose={() => setPreviewScreen(null)} />
