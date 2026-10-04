@@ -4,7 +4,7 @@ import Image from "next/image";
 import { MockProjectPreview } from "@/components/MockProjectPreview";
 import { ProjectCarousel } from "@/components/ProjectCarousel";
 import { RandomEmojiSet } from "@/components/RandomEmojiSet";
-import { productProjects } from "@/data/projects";
+import { otherProjects, productProjects } from "@/data/projects";
 import { useLanguage } from "@/lib/language";
 import { withBasePath } from "@/lib/paths";
 
@@ -28,7 +28,7 @@ const content = {
       line2Accent2: "бизнес и команду",
       line2After: "и защищаю продуктовые решения",
     },
-    skillsTitle: "Senior-функции",
+    skillsTitle: "Ключевые компетенции",
     channel: {
       eyebrow: "Telegram-канал",
       title: "Пишу о UX и продуктовой логике",
@@ -36,6 +36,7 @@ const content = {
       link: "Читать Rodberg Design",
     },
     casesTitle: "Продуктовые кейсы",
+    otherTitle: "Прочее",
     experienceTitle: "Опыт",
     finalBefore: "Открыт к",
     finalAccent1: "роли Senior Product Designer",
@@ -60,12 +61,6 @@ const content = {
         company: "ROSSKO",
         period: "Февраль 2024 — Май 2026",
         text: "Проектировал системную логику внутренних сервисов: связывал бизнес-правила, роли, статусы, ошибки и ограничения в сквозные сценарии и спецификации для разработки.",
-      },
-      {
-        role: "Основатель / Senior Product Designer / Full-stack",
-        company: "Слабаем!",
-        period: "2023 — настоящее время",
-        text: "Развиваю собственный стартап от исследования рынка и продуктовой стратегии до UX, разработки, запуска, монетизации, SEO и аналитики.",
       },
       {
         role: "Старший продуктовый дизайнер (UX / UI)",
@@ -108,6 +103,7 @@ const content = {
       link: "Read Rodberg Design",
     },
     casesTitle: "Product cases",
+    otherTitle: "Other",
     experienceTitle: "Experience",
     finalBefore: "Open to a",
     finalAccent1: "Senior Product Designer role",
@@ -132,12 +128,6 @@ const content = {
         company: "ROSSKO",
         period: "February 2024 — May 2026",
         text: "Designed the system logic of internal services, connecting business rules, roles, states, errors, and constraints into end-to-end flows and engineering-ready specifications.",
-      },
-      {
-        role: "Founder / Senior Product Designer / Full-stack",
-        company: "Slabaem!",
-        period: "2023 — Present",
-        text: "Developing my own startup from market research and product strategy through UX, engineering, launch, monetization, SEO, and analytics.",
       },
       {
         role: "Senior Product Designer (UX / UI)",
@@ -242,8 +232,19 @@ export default function Home() {
         <div className="mb-12 flex items-end justify-between gap-6">
           <h2 className="text-[clamp(1.6rem,2.45vw,2.4rem)] font-normal leading-none tracking-[-0.038em]">{t.casesTitle}</h2>
         </div>
-        <div className="grid gap-7 lg:grid-cols-4">
+        <div className="grid gap-7 lg:grid-cols-3">
           {productProjects.map((project) => (
+            <MockProjectPreview key={project.slug} project={project} />
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-[1800px] px-6 py-20 sm:px-10 lg:px-14">
+        <div className="mb-12 flex items-end justify-between gap-6">
+          <h2 className="text-[clamp(1.6rem,2.45vw,2.4rem)] font-normal leading-none tracking-[-0.038em]">{t.otherTitle}</h2>
+        </div>
+        <div className="grid gap-7 lg:grid-cols-3">
+          {otherProjects.map((project) => (
             <MockProjectPreview key={project.slug} project={project} />
           ))}
         </div>

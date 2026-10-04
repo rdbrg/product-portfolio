@@ -560,10 +560,10 @@ export const projects: Project[] = [
     slug: "slabaem-musicians-platform",
     title: "Сервис для поиска музыкантов «Слабаем!»",
     shortTitle: "Слабаем!",
-    category: "product",
+    category: "other",
     industry: "Продукт / музыкальная платформа",
     company: "Собственный стартап",
-    categoryTag: { ru: "Продукт", en: "Product" },
+    categoryTag: { ru: "Прочее", en: "Other" },
     year: "2023-настоящее время",
     website: "https://slabaem.space/",
     accent: "#18c37d",
@@ -659,6 +659,8 @@ export const projects: Project[] = [
 export const productProjects = projects
   .filter((project) => project.category === "product")
   .sort((a, b) => {
-    const order = ["rossko-enterprise-services", "slabaem-musicians-platform", "basis-telecom-marketplace", "aromatny-mir-ecommerce"];
+    const order = ["rossko-enterprise-services", "basis-telecom-marketplace", "aromatny-mir-ecommerce"];
     return order.indexOf(a.slug) - order.indexOf(b.slug);
   });
+
+export const otherProjects = projects.filter((project) => project.category === "other");
