@@ -14,7 +14,7 @@ const content = {
       before: "Я — Вадим Родберг, Senior Product Designer. 7 лет проектирую и развиваю",
       accent: "B2B, enterprise- и e-commerce-продукты",
     },
-    companies: ["Слабаем!", "ROSSKO", "Базис Телеком", "Ароматный мир"],
+    companies: ["ROSSKO", "Базис Телеком", "Ароматный мир"],
     statement: {
       line1Before: "Проектирую",
       line1Accent1: "сложные продукты",
@@ -81,7 +81,7 @@ const content = {
       before: "I’m Vadim Rodberg, a Senior Product Designer. For 7 years, I have designed and developed",
       accent: "B2B, enterprise, and e-commerce products",
     },
-    companies: ["Slabaem!", "ROSSKO", "Bazis Telecom", "Aromatny Mir"],
+    companies: ["ROSSKO", "Bazis Telecom", "Aromatny Mir"],
     statement: {
       line1Before: "I design",
       line1Accent1: "complex products",
